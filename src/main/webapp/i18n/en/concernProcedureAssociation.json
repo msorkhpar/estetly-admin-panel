@@ -1,0 +1,25 @@
+{
+  "estetlyApp": {
+    "concernProcedureAssociation": {
+      "home": {
+        "title": "Concern Procedure Associations",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Concern Procedure Association",
+        "createOrEditLabel": "Create or edit a Concern Procedure Association",
+        "notFound": "No Concern Procedure Associations found"
+      },
+      "created": "A new Concern Procedure Association is created with identifier {{ param }}",
+      "updated": "A Concern Procedure Association is updated with identifier {{ param }}",
+      "deleted": "A Concern Procedure Association is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Concern Procedure Association {{ id }}?"
+      },
+      "detail": {
+        "title": "Concern Procedure Association"
+      },
+      "id": "ID",
+      "procedure": "Procedure",
+      "concern": "Concern"
+    }
+  }
+}

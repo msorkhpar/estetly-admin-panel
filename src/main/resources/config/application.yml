@@ -90,13 +90,13 @@ management:
 
 spring:
   application:
-    name: estetlyAdminPanel
+    name: Estetly
   cloud:
     consul:
       discovery:
         healthCheckPath: /management/health
-        instanceId: estetlyadminpanel:${spring.application.instance-id:${random.value}}
-        service-name: estetlyadminpanel
+        instanceId: estetly:${spring.application.instance-id:${random.value}}
+        service-name: estetly
       config:
         watch:
           enabled: false
@@ -148,13 +148,13 @@ spring:
       enabled: true
   task:
     execution:
-      thread-name-prefix: estetly-admin-panel-task-
+      thread-name-prefix: estetly-task-
       pool:
         core-size: 2
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: estetly-admin-panel-scheduling-
+      thread-name-prefix: estetly-scheduling-
       pool:
         size: 2
   thymeleaf:
@@ -185,7 +185,7 @@ info:
 
 jhipster:
   clientApp:
-    name: 'estetlyAdminPanelApp'
+    name: 'estetlyApp'
   # By default CORS is disabled. Uncomment to enable.
   # cors:
   #   allowed-origins: "http://localhost:8100,http://localhost:9000"
@@ -195,12 +195,12 @@ jhipster:
   #   allow-credentials: true
   #   max-age: 1800
   mail:
-    from: estetlyAdminPanel@localhost
+    from: Estetly@localhost
   api-docs:
     default-include-pattern: /api/**
     management-include-pattern: /management/**
-    title: Estetly Admin Panel API
-    description: Estetly Admin Panel API documentation
+    title: Estetly API
+    description: Estetly API documentation
     version: 0.0.1
     terms-of-service-url:
     contact-name:

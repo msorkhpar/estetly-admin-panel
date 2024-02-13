@@ -1,0 +1,24 @@
+{
+  "estetlyApp": {
+    "doctor": {
+      "home": {
+        "title": "Doctors",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Doctor",
+        "createOrEditLabel": "Créer ou éditer un Doctor",
+        "notFound": "Aucun Doctor trouvé"
+      },
+      "created": "Un nouveau Doctor a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Doctor avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Doctor avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Doctor {{ id }} ?"
+      },
+      "detail": {
+        "title": "Doctor"
+      },
+      "id": "ID",
+      "name": "Name"
+    }
+  }
+}

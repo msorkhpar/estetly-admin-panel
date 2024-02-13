@@ -1,8 +1,8 @@
 {
-  "name": "estetly-admin-panel",
+  "name": "estetly",
   "version": "0.0.1-SNAPSHOT",
   "private": true,
-  "description": "Description for Estetly Admin Panel",
+  "description": "Description for Estetly",
   "license": "UNLICENSED",
   "scripts": {
     "app:start": "./mvnw",
@@ -66,7 +66,7 @@
     "webpack-dev-server": "webpack serve"
   },
   "config": {
-    "backend_port": 8080,
+    "backend_port": "8080",
     "default_environment": "prod",
     "packaging": "jar"
   },

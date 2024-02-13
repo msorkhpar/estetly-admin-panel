@@ -1,0 +1,107 @@
+
+application {
+  config {
+    baseName Estetly
+    applicationType monolith
+    packageName com.estetly.adminpanel
+    authenticationType jwt
+    devDatabaseType	h2Disk
+    databaseType	sql
+    prodDatabaseType postgresql
+    clientFramework react
+    serverPort 8080
+    enableTranslation true
+    languages	[en, fr]
+    buildTool	maven
+    cacheProvider	ehcache
+    clientPackageManager	npm
+  }
+  entities *
+}
+
+paginate Doctor, Review, Procedure, BodyAreaConcernAssociation with pagination
+
+DEFAULT_MIN_LENGTH = 1
+DEFAULT_MAX_LENGTH = 254
+DEFAULT_MIN = 0
+DEFAULT_MAX = 100
+
+enum Models{
+	BODY,
+    DENTAL,
+	TATTOO
+}
+
+enum Gender{
+    FEMALE
+	MALE,
+    ALL
+}
+
+entity Category{
+	name String required
+	model	Models required
+}
+
+entity BodyArea{
+	code String required
+    displayName String required
+}
+
+
+entity Doctor{
+	name String required
+}
+
+entity Review {
+	title String required maxlength(DEFAULT_MAX_LENGTH)
+    description TextBlob required
+    rate Integer min(1) max(5)
+    timestamp ZonedDateTime required
+}
+
+entity Procedure {
+	title String required maxlength(DEFAULT_MAX_LENGTH)
+    description TextBlob required
+    picture ImageBlob
+    inventiveness Integer min(1) max(100)
+    averageCost Double
+}
+
+entity Concern {
+	title String required
+    gender Gender required
+    otherNames String
+    description TextBlob required
+    picture ImageBlob
+}
+
+entity BodyAreaConcernAssociation{
+}
+
+entity ConcernProcedureAssociation{
+}
+
+entity DoctorProcedureAssociation{
+    picture ImageBlob
+    description TextBlob required
+	cost Float
+}
+
+
+relationship ManyToOne {
+	BodyAreaConcernAssociation{bodyArea(displayName) required} to BodyArea
+  	BodyAreaConcernAssociation{concern(title) required} to Concern
+
+    ConcernProcedureAssociation{procedure(title) required} to Procedure
+  	ConcernProcedureAssociation{concern(title) required} to Concern
+
+    DoctorProcedureAssociation{procedure(title) required} to Procedure
+  	DoctorProcedureAssociation{doctor(name) required} to Doctor
+
+
+}
+
+relationship OneToMany {
+	Category to Concern{category(name)}
+}

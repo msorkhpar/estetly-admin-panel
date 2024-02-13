@@ -1,0 +1,25 @@
+{
+  "estetlyApp": {
+    "bodyAreaConcernAssociation": {
+      "home": {
+        "title": "Body Area Concern Associations",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Body Area Concern Association",
+        "createOrEditLabel": "Create or edit a Body Area Concern Association",
+        "notFound": "No Body Area Concern Associations found"
+      },
+      "created": "A new Body Area Concern Association is created with identifier {{ param }}",
+      "updated": "A Body Area Concern Association is updated with identifier {{ param }}",
+      "deleted": "A Body Area Concern Association is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Body Area Concern Association {{ id }}?"
+      },
+      "detail": {
+        "title": "Body Area Concern Association"
+      },
+      "id": "ID",
+      "bodyArea": "Body Area",
+      "concern": "Concern"
+    }
+  }
+}

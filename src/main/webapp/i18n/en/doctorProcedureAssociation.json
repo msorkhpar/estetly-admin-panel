@@ -1,0 +1,28 @@
+{
+  "estetlyApp": {
+    "doctorProcedureAssociation": {
+      "home": {
+        "title": "Doctor Procedure Associations",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Doctor Procedure Association",
+        "createOrEditLabel": "Create or edit a Doctor Procedure Association",
+        "notFound": "No Doctor Procedure Associations found"
+      },
+      "created": "A new Doctor Procedure Association is created with identifier {{ param }}",
+      "updated": "A Doctor Procedure Association is updated with identifier {{ param }}",
+      "deleted": "A Doctor Procedure Association is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Doctor Procedure Association {{ id }}?"
+      },
+      "detail": {
+        "title": "Doctor Procedure Association"
+      },
+      "id": "ID",
+      "picture": "Picture",
+      "description": "Description",
+      "cost": "Cost",
+      "procedure": "Procedure",
+      "doctor": "Doctor"
+    }
+  }
+}

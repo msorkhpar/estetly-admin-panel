@@ -11,8 +11,8 @@
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:./target/h2db/testdb/estetlyadminpanel;DB_CLOSE_DELAY=-1
-    username: estetlyAdminPanel
+    url: jdbc:h2:file:./target/h2db/testdb/estetly;DB_CLOSE_DELAY=-1
+    username: Estetly
     password:
     hikari:
       auto-commit: false

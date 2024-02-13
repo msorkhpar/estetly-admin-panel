@@ -48,6 +48,16 @@ public class CacheConfiguration {
             createCache(cm, com.estetly.adminpanel.domain.User.class.getName());
             createCache(cm, com.estetly.adminpanel.domain.Authority.class.getName());
             createCache(cm, com.estetly.adminpanel.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.estetly.adminpanel.domain.Category.class.getName());
+            createCache(cm, com.estetly.adminpanel.domain.Category.class.getName() + ".concerns");
+            createCache(cm, com.estetly.adminpanel.domain.BodyArea.class.getName());
+            createCache(cm, com.estetly.adminpanel.domain.Doctor.class.getName());
+            createCache(cm, com.estetly.adminpanel.domain.Review.class.getName());
+            createCache(cm, com.estetly.adminpanel.domain.Procedure.class.getName());
+            createCache(cm, com.estetly.adminpanel.domain.Concern.class.getName());
+            createCache(cm, com.estetly.adminpanel.domain.BodyAreaConcernAssociation.class.getName());
+            createCache(cm, com.estetly.adminpanel.domain.ConcernProcedureAssociation.class.getName());
+            createCache(cm, com.estetly.adminpanel.domain.DoctorProcedureAssociation.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

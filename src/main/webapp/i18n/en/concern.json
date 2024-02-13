@@ -1,0 +1,29 @@
+{
+  "estetlyApp": {
+    "concern": {
+      "home": {
+        "title": "Concerns",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Concern",
+        "createOrEditLabel": "Create or edit a Concern",
+        "notFound": "No Concerns found"
+      },
+      "created": "A new Concern is created with identifier {{ param }}",
+      "updated": "A Concern is updated with identifier {{ param }}",
+      "deleted": "A Concern is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Concern {{ id }}?"
+      },
+      "detail": {
+        "title": "Concern"
+      },
+      "id": "ID",
+      "title": "Title",
+      "gender": "Gender",
+      "otherNames": "Other Names",
+      "description": "Description",
+      "picture": "Picture",
+      "category": "Category"
+    }
+  }
+}

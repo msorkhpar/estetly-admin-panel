@@ -1,0 +1,29 @@
+{
+  "estetlyApp": {
+    "concern": {
+      "home": {
+        "title": "Concerns",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Concern",
+        "createOrEditLabel": "Créer ou éditer un Concern",
+        "notFound": "Aucun Concern trouvé"
+      },
+      "created": "Un nouveau Concern a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Concern avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Concern avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Concern {{ id }} ?"
+      },
+      "detail": {
+        "title": "Concern"
+      },
+      "id": "ID",
+      "title": "Title",
+      "gender": "Gender",
+      "otherNames": "Other Names",
+      "description": "Description",
+      "picture": "Picture",
+      "category": "Category"
+    }
+  }
+}

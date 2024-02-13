@@ -1,0 +1,25 @@
+{
+  "estetlyApp": {
+    "bodyArea": {
+      "home": {
+        "title": "BodyAreas",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Body Area",
+        "createOrEditLabel": "Créer ou éditer un Body Area",
+        "notFound": "Aucun Body Area trouvé"
+      },
+      "created": "Un nouveau Body Area a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Body Area avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Body Area avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Body Area {{ id }} ?"
+      },
+      "detail": {
+        "title": "Body Area"
+      },
+      "id": "ID",
+      "code": "Code",
+      "displayName": "Display Name"
+    }
+  }
+}

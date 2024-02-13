@@ -21,18 +21,18 @@ import tech.jhipster.config.JHipsterConstants;
 
 @SpringBootApplication
 @EnableConfigurationProperties({ LiquibaseProperties.class, ApplicationProperties.class })
-public class EstetlyAdminPanelApp {
+public class EstetlyApp {
 
-    private static final Logger log = LoggerFactory.getLogger(EstetlyAdminPanelApp.class);
+    private static final Logger log = LoggerFactory.getLogger(EstetlyApp.class);
 
     private final Environment env;
 
-    public EstetlyAdminPanelApp(Environment env) {
+    public EstetlyApp(Environment env) {
         this.env = env;
     }
 
     /**
-     * Initializes estetlyAdminPanel.
+     * Initializes Estetly.
      * <p>
      * Spring profiles can be configured with a program argument --spring.profiles.active=your-active-profile
      * <p>
@@ -65,7 +65,7 @@ public class EstetlyAdminPanelApp {
      * @param args the command line arguments.
      */
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(EstetlyAdminPanelApp.class);
+        SpringApplication app = new SpringApplication(EstetlyApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);

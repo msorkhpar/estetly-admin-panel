@@ -1,6 +1,7 @@
 package com.estetly.adminpanel.domain;
 
 import static com.estetly.adminpanel.domain.BodyAreaTestSamples.*;
+import static com.estetly.adminpanel.domain.BodyAreaTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.estetly.adminpanel.web.rest.TestUtil;
@@ -20,5 +21,17 @@ class BodyAreaTest {
 
         bodyArea2 = getBodyAreaSample2();
         assertThat(bodyArea1).isNotEqualTo(bodyArea2);
+    }
+
+    @Test
+    void parentTest() throws Exception {
+        BodyArea bodyArea = getBodyAreaRandomSampleGenerator();
+        BodyArea bodyAreaBack = getBodyAreaRandomSampleGenerator();
+
+        bodyArea.setParent(bodyAreaBack);
+        assertThat(bodyArea.getParent()).isEqualTo(bodyAreaBack);
+
+        bodyArea.parent(null);
+        assertThat(bodyArea.getParent()).isNull();
     }
 }

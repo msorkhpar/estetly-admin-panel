@@ -31,7 +31,7 @@ export const DoctorProcedureAssociationUpdate = () => {
   const updateSuccess = useAppSelector(state => state.doctorProcedureAssociation.updateSuccess);
 
   const handleClose = () => {
-    navigate('/doctor-procedure-association');
+    navigate('/doctor-procedure-association' + location.search);
   };
 
   useEffect(() => {

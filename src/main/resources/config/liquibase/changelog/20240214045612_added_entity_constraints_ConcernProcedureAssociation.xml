@@ -4,20 +4,20 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
     <!--
-        Added the constraints for entity BodyAreaConcernAssociation.
+        Added the constraints for entity ConcernProcedureAssociation.
     -->
-    <changeSet id="20240213200539-2" author="jhipster">
+    <changeSet id="20240214045612-2" author="jhipster">
 
-        <addForeignKeyConstraint baseColumnNames="body_area_id"
-                                 baseTableName="body_area_concern_association"
-                                 constraintName="fk_body_area_concern_association__body_area_id"
+        <addForeignKeyConstraint baseColumnNames="procedure_id"
+                                 baseTableName="concern_procedure_association"
+                                 constraintName="fk_concern_procedure_association__procedure_id"
                                  referencedColumnNames="id"
-                                 referencedTableName="body_area"
+                                 referencedTableName="procedure"
                                  />
 
         <addForeignKeyConstraint baseColumnNames="concern_id"
-                                 baseTableName="body_area_concern_association"
-                                 constraintName="fk_body_area_concern_association__concern_id"
+                                 baseTableName="concern_procedure_association"
+                                 constraintName="fk_concern_procedure_association__concern_id"
                                  referencedColumnNames="id"
                                  referencedTableName="concern"
                                  />

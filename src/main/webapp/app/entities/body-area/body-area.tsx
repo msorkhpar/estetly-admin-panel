@@ -95,6 +95,9 @@ export const BodyArea = () => {
                   <Translate contentKey="estetlyApp.bodyArea.displayName">Display Name</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('displayName')} />
                 </th>
+                <th>
+                  <Translate contentKey="estetlyApp.bodyArea.parent">Parent</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
                 <th />
               </tr>
             </thead>
@@ -108,6 +111,7 @@ export const BodyArea = () => {
                   </td>
                   <td>{bodyArea.code}</td>
                   <td>{bodyArea.displayName}</td>
+                  <td>{bodyArea.parent ? <Link to={`/body-area/${bodyArea.parent.id}`}>{bodyArea.parent.displayName}</Link> : ''}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`/body-area/${bodyArea.id}`} color="info" size="sm" data-cy="entityDetailsButton">

@@ -8,6 +8,7 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
+import { getEntities as getBodyAreas } from 'app/entities/body-area/body-area.reducer';
 import { IBodyArea } from 'app/shared/model/body-area.model';
 import { getEntity, updateEntity, createEntity, reset } from './body-area.reducer';
 
@@ -19,6 +20,7 @@ export const BodyAreaUpdate = () => {
   const { id } = useParams<'id'>();
   const isNew = id === undefined;
 
+  const bodyAreas = useAppSelector(state => state.bodyArea.entities);
   const bodyAreaEntity = useAppSelector(state => state.bodyArea.entity);
   const loading = useAppSelector(state => state.bodyArea.loading);
   const updating = useAppSelector(state => state.bodyArea.updating);
@@ -34,6 +36,8 @@ export const BodyAreaUpdate = () => {
     } else {
       dispatch(getEntity(id));
     }
+
+    dispatch(getBodyAreas({}));
   }, []);
 
   useEffect(() => {
@@ -51,6 +55,7 @@ export const BodyAreaUpdate = () => {
     const entity = {
       ...bodyAreaEntity,
       ...values,
+      parent: bodyAreas.find(it => it.id.toString() === values.parent.toString()),
     };
 
     if (isNew) {
@@ -65,6 +70,7 @@ export const BodyAreaUpdate = () => {
       ? {}
       : {
           ...bodyAreaEntity,
+          parent: bodyAreaEntity?.parent?.id,
         };
 
   return (
@@ -112,6 +118,22 @@ export const BodyAreaUpdate = () => {
                   required: { value: true, message: translate('entity.validation.required') },
                 }}
               />
+              <ValidatedField
+                id="body-area-parent"
+                name="parent"
+                data-cy="parent"
+                label={translate('estetlyApp.bodyArea.parent')}
+                type="select"
+              >
+                <option value="" key="0" />
+                {bodyAreas
+                  ? bodyAreas.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.displayName}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
               <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/body-area" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;

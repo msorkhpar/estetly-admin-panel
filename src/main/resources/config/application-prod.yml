@@ -24,12 +24,6 @@ management:
     metrics:
       export:
         enabled: false
-  zipkin: # Use the "zipkin" Maven profile to have the Spring Cloud Zipkin dependencies
-    tracing:
-      endpoint: http://localhost:9411/api/v2/spans
-  tracing:
-    sampling:
-      probability: 1.0 # report 100% of traces
 
 spring:
   devtools:
@@ -37,12 +31,6 @@ spring:
       enabled: false
     livereload:
       enabled: false
-  cloud:
-    consul:
-      discovery:
-        prefer-ip-address: true
-      host: localhost
-      port: 8500
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:postgresql://localhost:5432/Estetly
@@ -111,7 +99,7 @@ jhipster:
         # - In the Consul configserver
         # - In a separate `application-prod.yml` file, in the same folder as your executable JAR file
         # - In the `JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET` environment variable
-        base64-secret: ZDZjMjI3MjJmNGFiOTNiMTE0MmZmN2JhMjlkNTk0NTM4ODI2NjVkODQ4MWFkZTlhZWVkNjU0OTQwZTM2Zjk0Y2EwOWM5NGY4OTUyYTcwNDNjNjNkNDRkMTQ5ZDEyZWM4NGE0NjUxZWRjMGQwNzg4Y2NmMjMwN2ViYzMwYWY5MDM=
+        base64-secret: YjQ0MjFiNjMwMjI0YTRmZTBjZTU2YWVjMTU2ZGZhZTA5ZjBiM2IyMTcxNWU5ZDdkMjNiZTk1MDJhZDk5MmU4Nzg1M2MyZTFiM2M5NTUwM2NmOGY5ZDI5NDdhNGYxNTUxNTcwYmI3OWE0YTJiNGMzYThlZThjODhhMmQ3N2Q2Mjc=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000

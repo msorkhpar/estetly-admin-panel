@@ -25,7 +25,7 @@ export const DoctorProcedureAssociationDeleteDialog = () => {
   const updateSuccess = useAppSelector(state => state.doctorProcedureAssociation.updateSuccess);
 
   const handleClose = () => {
-    navigate('/doctor-procedure-association');
+    navigate('/doctor-procedure-association' + pageLocation.search);
   };
 
   useEffect(() => {

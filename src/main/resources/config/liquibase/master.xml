@@ -17,20 +17,21 @@
     <property name="datetimeType" value="datetime" dbms="postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240213200533_added_entity_Category.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240213200534_added_entity_BodyArea.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240213200535_added_entity_Doctor.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240213200536_added_entity_Review.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240213200537_added_entity_Procedure.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240213200538_added_entity_Concern.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240213200539_added_entity_BodyAreaConcernAssociation.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240213200540_added_entity_ConcernProcedureAssociation.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240213200541_added_entity_DoctorProcedureAssociation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240214044912_added_entity_Category.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240214045012_added_entity_BodyArea.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240214045112_added_entity_Doctor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240214045212_added_entity_Review.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240214045312_added_entity_Procedure.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240214045412_added_entity_Concern.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240214045512_added_entity_BodyAreaConcernAssociation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240214045612_added_entity_ConcernProcedureAssociation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240214045712_added_entity_DoctorProcedureAssociation.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
-    <include file="config/liquibase/changelog/20240213200538_added_entity_constraints_Concern.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240213200539_added_entity_constraints_BodyAreaConcernAssociation.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240213200540_added_entity_constraints_ConcernProcedureAssociation.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240213200541_added_entity_constraints_DoctorProcedureAssociation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240214045012_added_entity_constraints_BodyArea.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240214045412_added_entity_constraints_Concern.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240214045512_added_entity_constraints_BodyAreaConcernAssociation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240214045612_added_entity_constraints_ConcernProcedureAssociation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240214045712_added_entity_constraints_DoctorProcedureAssociation.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

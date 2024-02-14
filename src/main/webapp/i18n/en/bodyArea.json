@@ -19,7 +19,8 @@
       },
       "id": "ID",
       "code": "Code",
-      "displayName": "Display Name"
+      "displayName": "Display Name",
+      "parent": "Parent"
     }
   }
 }

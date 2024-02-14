@@ -1,5 +1,6 @@
 package com.estetly.adminpanel.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -30,6 +31,10 @@ public class BodyArea implements Serializable {
     @NotNull
     @Column(name = "display_name", nullable = false)
     private String displayName;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnoreProperties(value = { "parent" }, allowSetters = true)
+    private BodyArea parent;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
@@ -70,6 +75,19 @@ public class BodyArea implements Serializable {
 
     public void setDisplayName(String displayName) {
         this.displayName = displayName;
+    }
+
+    public BodyArea getParent() {
+        return this.parent;
+    }
+
+    public void setParent(BodyArea bodyArea) {
+        this.parent = bodyArea;
+    }
+
+    public BodyArea parent(BodyArea bodyArea) {
+        this.setParent(bodyArea);
+        return this;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here

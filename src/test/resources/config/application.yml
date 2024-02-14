@@ -16,14 +16,6 @@
 spring:
   application:
     name: Estetly
-  cloud:
-    consul:
-      discovery:
-        enabled: false
-        instanceId: ${spring.application.name}:${spring.application.instance-id:${random.value}}
-      config:
-        enabled: false
-      enabled: false
   # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
   liquibase:
     contexts: test
@@ -77,7 +69,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: ZDZjMjI3MjJmNGFiOTNiMTE0MmZmN2JhMjlkNTk0NTM4ODI2NjVkODQ4MWFkZTlhZWVkNjU0OTQwZTM2Zjk0Y2EwOWM5NGY4OTUyYTcwNDNjNjNkNDRkMTQ5ZDEyZWM4NGE0NjUxZWRjMGQwNzg4Y2NmMjMwN2ViYzMwYWY5MDM=
+        base64-secret: YjQ0MjFiNjMwMjI0YTRmZTBjZTU2YWVjMTU2ZGZhZTA5ZjBiM2IyMTcxNWU5ZDdkMjNiZTk1MDJhZDk5MmU4Nzg1M2MyZTFiM2M5NTUwM2NmOGY5ZDI5NDdhNGYxNTUxNTcwYmI3OWE0YTJiNGMzYThlZThjODhhMmQ3N2Q2Mjc=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 86400

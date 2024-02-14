@@ -26,6 +26,7 @@ public class BodyAreaConcernAssociation implements Serializable {
 
     @ManyToOne(optional = false)
     @NotNull
+    @JsonIgnoreProperties(value = { "parent" }, allowSetters = true)
     private BodyArea bodyArea;
 
     @ManyToOne(optional = false)

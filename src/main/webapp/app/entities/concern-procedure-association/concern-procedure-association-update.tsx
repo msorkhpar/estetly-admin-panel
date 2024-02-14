@@ -31,7 +31,7 @@ export const ConcernProcedureAssociationUpdate = () => {
   const updateSuccess = useAppSelector(state => state.concernProcedureAssociation.updateSuccess);
 
   const handleClose = () => {
-    navigate('/concern-procedure-association');
+    navigate('/concern-procedure-association' + location.search);
   };
 
   useEffect(() => {

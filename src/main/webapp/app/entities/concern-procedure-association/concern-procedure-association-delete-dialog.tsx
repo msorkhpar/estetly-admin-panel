@@ -25,7 +25,7 @@ export const ConcernProcedureAssociationDeleteDialog = () => {
   const updateSuccess = useAppSelector(state => state.concernProcedureAssociation.updateSuccess);
 
   const handleClose = () => {
-    navigate('/concern-procedure-association');
+    navigate('/concern-procedure-association' + pageLocation.search);
   };
 
   useEffect(() => {

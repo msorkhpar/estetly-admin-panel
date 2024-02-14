@@ -43,6 +43,10 @@ export const BodyAreaDetail = () => {
             </span>
           </dt>
           <dd>{bodyAreaEntity.displayName}</dd>
+          <dt>
+            <Translate contentKey="estetlyApp.bodyArea.parent">Parent</Translate>
+          </dt>
+          <dd>{bodyAreaEntity.parent ? bodyAreaEntity.parent.displayName : ''}</dd>
         </dl>
         <Button tag={Link} to="/body-area" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}

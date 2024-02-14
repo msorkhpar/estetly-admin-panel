@@ -145,12 +145,17 @@ public class BodyAreaResource {
     /**
      * {@code GET  /body-areas} : get all the bodyAreas.
      *
+     * @param eagerload flag to eager load entities from relationships (This is applicable for many-to-many).
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of bodyAreas in body.
      */
     @GetMapping("")
-    public List<BodyArea> getAllBodyAreas() {
+    public List<BodyArea> getAllBodyAreas(@RequestParam(name = "eagerload", required = false, defaultValue = "true") boolean eagerload) {
         log.debug("REST request to get all BodyAreas");
-        return bodyAreaRepository.findAll();
+        if (eagerload) {
+            return bodyAreaRepository.findAllWithEagerRelationships();
+        } else {
+            return bodyAreaRepository.findAll();
+        }
     }
 
     /**
@@ -162,7 +167,7 @@ public class BodyAreaResource {
     @GetMapping("/{id}")
     public ResponseEntity<BodyArea> getBodyArea(@PathVariable("id") Long id) {
         log.debug("REST request to get BodyArea : {}", id);
-        Optional<BodyArea> bodyArea = bodyAreaRepository.findById(id);
+        Optional<BodyArea> bodyArea = bodyAreaRepository.findOneWithEagerRelationships(id);
         return ResponseUtil.wrapOrNotFound(bodyArea);
     }
 

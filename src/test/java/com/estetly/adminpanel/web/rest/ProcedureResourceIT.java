@@ -41,8 +41,8 @@ class ProcedureResourceIT {
     private static final String DEFAULT_PICTURE_CONTENT_TYPE = "image/jpg";
     private static final String UPDATED_PICTURE_CONTENT_TYPE = "image/png";
 
-    private static final Integer DEFAULT_INVENTIVENESS = 1;
-    private static final Integer UPDATED_INVENTIVENESS = 2;
+    private static final Integer DEFAULT_INVASIVENESS = 0;
+    private static final Integer UPDATED_INVASIVENESS = 1;
 
     private static final Double DEFAULT_AVERAGE_COST = 1D;
     private static final Double UPDATED_AVERAGE_COST = 2D;
@@ -76,7 +76,7 @@ class ProcedureResourceIT {
             .description(DEFAULT_DESCRIPTION)
             .picture(DEFAULT_PICTURE)
             .pictureContentType(DEFAULT_PICTURE_CONTENT_TYPE)
-            .inventiveness(DEFAULT_INVENTIVENESS)
+            .invasiveness(DEFAULT_INVASIVENESS)
             .averageCost(DEFAULT_AVERAGE_COST);
         return procedure;
     }
@@ -93,7 +93,7 @@ class ProcedureResourceIT {
             .description(UPDATED_DESCRIPTION)
             .picture(UPDATED_PICTURE)
             .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE)
-            .inventiveness(UPDATED_INVENTIVENESS)
+            .invasiveness(UPDATED_INVASIVENESS)
             .averageCost(UPDATED_AVERAGE_COST);
         return procedure;
     }
@@ -120,7 +120,7 @@ class ProcedureResourceIT {
         assertThat(testProcedure.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
         assertThat(testProcedure.getPicture()).isEqualTo(DEFAULT_PICTURE);
         assertThat(testProcedure.getPictureContentType()).isEqualTo(DEFAULT_PICTURE_CONTENT_TYPE);
-        assertThat(testProcedure.getInventiveness()).isEqualTo(DEFAULT_INVENTIVENESS);
+        assertThat(testProcedure.getInvasiveness()).isEqualTo(DEFAULT_INVASIVENESS);
         assertThat(testProcedure.getAverageCost()).isEqualTo(DEFAULT_AVERAGE_COST);
     }
 
@@ -175,7 +175,7 @@ class ProcedureResourceIT {
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
             .andExpect(jsonPath("$.[*].pictureContentType").value(hasItem(DEFAULT_PICTURE_CONTENT_TYPE)))
             .andExpect(jsonPath("$.[*].picture").value(hasItem(Base64.getEncoder().encodeToString(DEFAULT_PICTURE))))
-            .andExpect(jsonPath("$.[*].inventiveness").value(hasItem(DEFAULT_INVENTIVENESS)))
+            .andExpect(jsonPath("$.[*].invasiveness").value(hasItem(DEFAULT_INVASIVENESS)))
             .andExpect(jsonPath("$.[*].averageCost").value(hasItem(DEFAULT_AVERAGE_COST.doubleValue())));
     }
 
@@ -195,7 +195,7 @@ class ProcedureResourceIT {
             .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()))
             .andExpect(jsonPath("$.pictureContentType").value(DEFAULT_PICTURE_CONTENT_TYPE))
             .andExpect(jsonPath("$.picture").value(Base64.getEncoder().encodeToString(DEFAULT_PICTURE)))
-            .andExpect(jsonPath("$.inventiveness").value(DEFAULT_INVENTIVENESS))
+            .andExpect(jsonPath("$.invasiveness").value(DEFAULT_INVASIVENESS))
             .andExpect(jsonPath("$.averageCost").value(DEFAULT_AVERAGE_COST.doubleValue()));
     }
 
@@ -223,7 +223,7 @@ class ProcedureResourceIT {
             .description(UPDATED_DESCRIPTION)
             .picture(UPDATED_PICTURE)
             .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE)
-            .inventiveness(UPDATED_INVENTIVENESS)
+            .invasiveness(UPDATED_INVASIVENESS)
             .averageCost(UPDATED_AVERAGE_COST);
 
         restProcedureMockMvc
@@ -242,7 +242,7 @@ class ProcedureResourceIT {
         assertThat(testProcedure.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
         assertThat(testProcedure.getPicture()).isEqualTo(UPDATED_PICTURE);
         assertThat(testProcedure.getPictureContentType()).isEqualTo(UPDATED_PICTURE_CONTENT_TYPE);
-        assertThat(testProcedure.getInventiveness()).isEqualTo(UPDATED_INVENTIVENESS);
+        assertThat(testProcedure.getInvasiveness()).isEqualTo(UPDATED_INVASIVENESS);
         assertThat(testProcedure.getAverageCost()).isEqualTo(UPDATED_AVERAGE_COST);
     }
 
@@ -318,7 +318,7 @@ class ProcedureResourceIT {
             .description(UPDATED_DESCRIPTION)
             .picture(UPDATED_PICTURE)
             .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE)
-            .inventiveness(UPDATED_INVENTIVENESS)
+            .invasiveness(UPDATED_INVASIVENESS)
             .averageCost(UPDATED_AVERAGE_COST);
 
         restProcedureMockMvc
@@ -337,7 +337,7 @@ class ProcedureResourceIT {
         assertThat(testProcedure.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
         assertThat(testProcedure.getPicture()).isEqualTo(UPDATED_PICTURE);
         assertThat(testProcedure.getPictureContentType()).isEqualTo(UPDATED_PICTURE_CONTENT_TYPE);
-        assertThat(testProcedure.getInventiveness()).isEqualTo(UPDATED_INVENTIVENESS);
+        assertThat(testProcedure.getInvasiveness()).isEqualTo(UPDATED_INVASIVENESS);
         assertThat(testProcedure.getAverageCost()).isEqualTo(UPDATED_AVERAGE_COST);
     }
 
@@ -358,7 +358,7 @@ class ProcedureResourceIT {
             .description(UPDATED_DESCRIPTION)
             .picture(UPDATED_PICTURE)
             .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE)
-            .inventiveness(UPDATED_INVENTIVENESS)
+            .invasiveness(UPDATED_INVASIVENESS)
             .averageCost(UPDATED_AVERAGE_COST);
 
         restProcedureMockMvc
@@ -377,7 +377,7 @@ class ProcedureResourceIT {
         assertThat(testProcedure.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
         assertThat(testProcedure.getPicture()).isEqualTo(UPDATED_PICTURE);
         assertThat(testProcedure.getPictureContentType()).isEqualTo(UPDATED_PICTURE_CONTENT_TYPE);
-        assertThat(testProcedure.getInventiveness()).isEqualTo(UPDATED_INVENTIVENESS);
+        assertThat(testProcedure.getInvasiveness()).isEqualTo(UPDATED_INVASIVENESS);
         assertThat(testProcedure.getAverageCost()).isEqualTo(UPDATED_AVERAGE_COST);
     }
 

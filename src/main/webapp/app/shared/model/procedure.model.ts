@@ -4,7 +4,7 @@ export interface IProcedure {
   description?: string | null;
   pictureContentType?: string | null;
   picture?: string | null;
-  inventiveness?: number | null;
+  invasiveness?: number | null;
   averageCost?: number | null;
 }
 

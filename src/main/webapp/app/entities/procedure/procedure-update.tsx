@@ -47,8 +47,8 @@ export const ProcedureUpdate = () => {
     if (values.id !== undefined && typeof values.id !== 'number') {
       values.id = Number(values.id);
     }
-    if (values.inventiveness !== undefined && typeof values.inventiveness !== 'number') {
-      values.inventiveness = Number(values.inventiveness);
+    if (values.invasiveness !== undefined && typeof values.invasiveness !== 'number') {
+      values.invasiveness = Number(values.invasiveness);
     }
     if (values.averageCost !== undefined && typeof values.averageCost !== 'number') {
       values.averageCost = Number(values.averageCost);
@@ -125,13 +125,13 @@ export const ProcedureUpdate = () => {
                 accept="image/*"
               />
               <ValidatedField
-                label={translate('estetlyApp.procedure.inventiveness')}
-                id="procedure-inventiveness"
-                name="inventiveness"
-                data-cy="inventiveness"
+                label={translate('estetlyApp.procedure.invasiveness')}
+                id="procedure-invasiveness"
+                name="invasiveness"
+                data-cy="invasiveness"
                 type="text"
                 validate={{
-                  min: { value: 1, message: translate('entity.validation.min', { min: 1 }) },
+                  min: { value: 0, message: translate('entity.validation.min', { min: 0 }) },
                   max: { value: 100, message: translate('entity.validation.max', { max: 100 }) },
                   validate: v => isNumber(v) || translate('entity.validation.number'),
                 }}

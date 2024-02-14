@@ -66,11 +66,11 @@ export const ProcedureDetail = () => {
             ) : null}
           </dd>
           <dt>
-            <span id="inventiveness">
-              <Translate contentKey="estetlyApp.procedure.inventiveness">Inventiveness</Translate>
+            <span id="invasiveness">
+              <Translate contentKey="estetlyApp.procedure.invasiveness">Invasiveness</Translate>
             </span>
           </dt>
-          <dd>{procedureEntity.inventiveness}</dd>
+          <dd>{procedureEntity.invasiveness}</dd>
           <dt>
             <span id="averageCost">
               <Translate contentKey="estetlyApp.procedure.averageCost">Average Cost</Translate>

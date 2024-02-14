@@ -12,17 +12,14 @@ public class ProcedureTestSamples {
     private static final AtomicInteger intCount = new AtomicInteger(random.nextInt() + (2 * Short.MAX_VALUE));
 
     public static Procedure getProcedureSample1() {
-        return new Procedure().id(1L).title("title1").inventiveness(1);
+        return new Procedure().id(1L).title("title1").invasiveness(1);
     }
 
     public static Procedure getProcedureSample2() {
-        return new Procedure().id(2L).title("title2").inventiveness(2);
+        return new Procedure().id(2L).title("title2").invasiveness(2);
     }
 
     public static Procedure getProcedureRandomSampleGenerator() {
-        return new Procedure()
-            .id(longCount.incrementAndGet())
-            .title(UUID.randomUUID().toString())
-            .inventiveness(intCount.incrementAndGet());
+        return new Procedure().id(longCount.incrementAndGet()).title(UUID.randomUUID().toString()).invasiveness(intCount.incrementAndGet());
     }
 }

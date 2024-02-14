@@ -142,8 +142,8 @@ public class ProcedureResource {
                 if (procedure.getPictureContentType() != null) {
                     existingProcedure.setPictureContentType(procedure.getPictureContentType());
                 }
-                if (procedure.getInventiveness() != null) {
-                    existingProcedure.setInventiveness(procedure.getInventiveness());
+                if (procedure.getInvasiveness() != null) {
+                    existingProcedure.setInvasiveness(procedure.getInvasiveness());
                 }
                 if (procedure.getAverageCost() != null) {
                     existingProcedure.setAverageCost(procedure.getAverageCost());

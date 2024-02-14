@@ -125,9 +125,9 @@ export const Procedure = () => {
                   <Translate contentKey="estetlyApp.procedure.picture">Picture</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('picture')} />
                 </th>
-                <th className="hand" onClick={sort('inventiveness')}>
-                  <Translate contentKey="estetlyApp.procedure.inventiveness">Inventiveness</Translate>{' '}
-                  <FontAwesomeIcon icon={getSortIconByFieldName('inventiveness')} />
+                <th className="hand" onClick={sort('invasiveness')}>
+                  <Translate contentKey="estetlyApp.procedure.invasiveness">Invasiveness</Translate>{' '}
+                  <FontAwesomeIcon icon={getSortIconByFieldName('invasiveness')} />
                 </th>
                 <th className="hand" onClick={sort('averageCost')}>
                   <Translate contentKey="estetlyApp.procedure.averageCost">Average Cost</Translate>{' '}
@@ -161,7 +161,7 @@ export const Procedure = () => {
                       </div>
                     ) : null}
                   </td>
-                  <td>{procedure.inventiveness}</td>
+                  <td>{procedure.invasiveness}</td>
                   <td>{procedure.averageCost}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">

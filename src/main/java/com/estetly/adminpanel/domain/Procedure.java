@@ -39,10 +39,10 @@ public class Procedure implements Serializable {
     @Column(name = "picture_content_type")
     private String pictureContentType;
 
-    @Min(value = 1)
+    @Min(value = 0)
     @Max(value = 100)
-    @Column(name = "inventiveness")
-    private Integer inventiveness;
+    @Column(name = "invasiveness")
+    private Integer invasiveness;
 
     @Column(name = "average_cost")
     private Double averageCost;
@@ -114,17 +114,17 @@ public class Procedure implements Serializable {
         this.pictureContentType = pictureContentType;
     }
 
-    public Integer getInventiveness() {
-        return this.inventiveness;
+    public Integer getInvasiveness() {
+        return this.invasiveness;
     }
 
-    public Procedure inventiveness(Integer inventiveness) {
-        this.setInventiveness(inventiveness);
+    public Procedure invasiveness(Integer invasiveness) {
+        this.setInvasiveness(invasiveness);
         return this;
     }
 
-    public void setInventiveness(Integer inventiveness) {
-        this.inventiveness = inventiveness;
+    public void setInvasiveness(Integer invasiveness) {
+        this.invasiveness = invasiveness;
     }
 
     public Double getAverageCost() {
@@ -168,7 +168,7 @@ public class Procedure implements Serializable {
             ", description='" + getDescription() + "'" +
             ", picture='" + getPicture() + "'" +
             ", pictureContentType='" + getPictureContentType() + "'" +
-            ", inventiveness=" + getInventiveness() +
+            ", invasiveness=" + getInvasiveness() +
             ", averageCost=" + getAverageCost() +
             "}";
     }

@@ -220,6 +220,12 @@ For more information refer to [Using Docker and Docker-Compose][], this page als
 
 To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`), this will let you generate configuration files for a number of Continuous Integration systems. Consult the [Setting up Continuous Integration][] page for more information.
 
+```shell
+jhipster jdl panel.jdl
+./mvnw package -Pprod -Dmaven.test.skip jib:dockerBuild -Djib.to.image=sorkhpar/estetly-admin-panel:latest
+docker push  sorkhpar/estetly-admin-panel
+```
+
 [JHipster Homepage and latest documentation]: https://www.jhipster.tech
 [JHipster 8.1.0 archive]: https://www.jhipster.tech/documentation-archive/v8.1.0
 [Using JHipster in development]: https://www.jhipster.tech/documentation-archive/v8.1.0/development/

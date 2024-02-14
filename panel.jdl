@@ -64,7 +64,7 @@ entity Procedure {
     title String required maxlength(DEFAULT_MAX_LENGTH)
     description TextBlob
     picture ImageBlob
-    inventiveness Integer min(1) max(100)
+    invasiveness Integer min(0) max(100)
     averageCost Double
 }
 

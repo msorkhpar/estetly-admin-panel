@@ -66,7 +66,7 @@ export const CategoryUpdate = () => {
     isNew
       ? {}
       : {
-          model: 'BODY',
+          model: 'MODEL_1',
           ...categoryEntity,
         };
 

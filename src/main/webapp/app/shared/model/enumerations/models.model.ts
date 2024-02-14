@@ -1,7 +1,9 @@
 export enum Models {
-  BODY = 'BODY',
+  MODEL_1 = 'MODEL_1',
 
-  DENTAL = 'DENTAL',
+  MODEL_2 = 'MODEL_2',
 
-  TATTOO = 'TATTOO',
+  MODEL_3 = 'MODEL_3',
+
+  MODEL_4 = 'MODEL_4',
 }

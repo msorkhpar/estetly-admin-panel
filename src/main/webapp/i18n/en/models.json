@@ -2,9 +2,10 @@
   "estetlyApp": {
     "Models": {
       "null": "",
-      "BODY": "BODY",
-      "DENTAL": "DENTAL",
-      "TATTOO": "TATTOO"
+      "MODEL_1": "MODEL_1",
+      "MODEL_2": "MODEL_2",
+      "MODEL_3": "MODEL_3",
+      "MODEL_4": "MODEL_4"
     }
   }
 }

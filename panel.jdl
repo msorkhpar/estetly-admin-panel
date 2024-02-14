@@ -26,9 +26,10 @@ DEFAULT_MIN = 0
 DEFAULT_MAX = 100
 
 enum Models {
-    BODY,
-    DENTAL,
-    TATTOO
+    MODEL_1,
+    MODEL_2,
+    MODEL_3,
+    MODEL_4
 }
 
 enum Gender {
@@ -99,7 +100,6 @@ relationship ManyToOne {
     DoctorProcedureAssociation{doctor(name) required} to Doctor
 
     BodyArea{parent(displayName)} to BodyArea
-
 
 }
 

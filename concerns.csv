@@ -1,0 +1,417 @@
+MODEL,CATEGORY,AREA,SUB AREA,CONCERN NAME
+Model 2,Tattoo removal,Scalp,,Small: Under two fingers
+Model 2,Tattoo removal,Scalp,,Medium: Under one hand
+Model 2,Tattoo removal,Scalp,,Large: Under two hands
+Model 2,Tattoo removal,Scalp,,Extra Large: Under three hands
+Model 2,Tattoo removal,Scalp,,Full Area
+Model 2,Tattoo removal,Face,Forehead,Small: Under two fingers
+Model 2,Tattoo removal,Face,Forehead,Medium: Under one hand
+Model 2,Tattoo removal,Face,Forehead,Full Area
+Model 2,Tattoo removal,Face,Temples,Small: Under two fingers
+Model 2,Tattoo removal,Face,Temples,Full Area
+Model 2,Tattoo removal,Face,Ears,Small: Under two fingers
+Model 2,Tattoo removal,Face,Ears,Full Area
+Model 2,Tattoo removal,Face,Eyebrows,Small: Under two fingers
+Model 2,Tattoo removal,Face,Eyelids,Small: Under two fingers
+Model 2,Tattoo removal,Face,Eyes,Small: Under two fingers
+Model 2,Tattoo removal,Face,Eyelashes,Small: Under two fingers
+Model 2,Tattoo removal,Face,Nose,Small: Under two fingers
+Model 2,Tattoo removal,Face,Nose,Full Area
+Model 2,Tattoo removal,Face,Nostrils,Small: Under two fingers
+Model 2,Tattoo removal,Face,Cheeks,Small: Under two fingers
+Model 2,Tattoo removal,Face,Cheeks,Medium: Under one hand
+Model 2,Tattoo removal,Face,Cheeks,Full Area
+Model 2,Tattoo removal,Face,Mouth,Small: Under two fingers
+Model 2,Tattoo removal,Face,Lips,Small: Under two fingers
+Model 2,Tattoo removal,Face,Jaw,Small: Under two fingers
+Model 2,Tattoo removal,Face,Jaw,Medium: Under one hand
+Model 2,Tattoo removal,Face,Jaw,Full Area
+Model 2,Tattoo removal,Neck,,Small: Under two fingers
+Model 2,Tattoo removal,Neck,,Medium: Under one hand
+Model 2,Tattoo removal,Neck,,Large: Under two hands
+Model 2,Tattoo removal,Neck,,Extra Large: Under three hands
+Model 2,Tattoo removal,Neck,,Full Area
+Model 2,Tattoo removal,Shoulders,,Small: Under two fingers
+Model 2,Tattoo removal,Shoulders,,Medium: Under one hand
+Model 2,Tattoo removal,Shoulders,,Large: Under two hands
+Model 2,Tattoo removal,Shoulders,,Extra Large: Under three hands
+Model 2,Tattoo removal,Shoulders,,Full Area
+Model 2,Tattoo removal,Chest,,Small: Under two fingers
+Model 2,Tattoo removal,Chest,,Medium: Under one hand
+Model 2,Tattoo removal,Chest,,Large: Under two hands
+Model 2,Tattoo removal,Chest,,Extra Large: Under three hands
+Model 2,Tattoo removal,Chest,,Full Area
+Model 2,Tattoo removal,Abdomen,,Small: Under two fingers
+Model 2,Tattoo removal,Abdomen,,Medium: Under one hand
+Model 2,Tattoo removal,Abdomen,,Large: Under two hands
+Model 2,Tattoo removal,Abdomen,,Extra Large: Under three hands
+Model 2,Tattoo removal,Abdomen,,Full Area
+Model 2,Tattoo removal,Lower abdomen,,Small: Under two fingers
+Model 2,Tattoo removal,Lower abdomen,,Medium: Under one hand
+Model 2,Tattoo removal,Lower abdomen,,Large: Under two hands
+Model 2,Tattoo removal,Lower abdomen,,Extra Large: Under three hands
+Model 2,Tattoo removal,Lower abdomen,,Full Area
+Model 2,Tattoo removal,Intimate area,,Small: Under two fingers
+Model 2,Tattoo removal,Intimate area,,Medium: Under one hand
+Model 2,Tattoo removal,Intimate area,,Full Area
+Model 2,Tattoo removal,Armpits,,Small: Under two fingers
+Model 2,Tattoo removal,Armpits,,Medium: Under one hand
+Model 2,Tattoo removal,Armpits,,Full Area
+Model 2,Tattoo removal,Upper arms,,Small: Under two fingers
+Model 2,Tattoo removal,Upper arms,,Medium: Under one hand
+Model 2,Tattoo removal,Upper arms,,Large: Under two hands
+Model 2,Tattoo removal,Upper arms,,Extra Large: Under three hands
+Model 2,Tattoo removal,Upper arms,,Full Area
+Model 2,Tattoo removal,Elbows,,Small: Under two fingers
+Model 2,Tattoo removal,Elbows,,Medium: Under one hand
+Model 2,Tattoo removal,Elbows,,Large: Under two hands
+Model 2,Tattoo removal,Elbows,,Full Area
+Model 2,Tattoo removal,Forearms,,Small: Under two fingers
+Model 2,Tattoo removal,Forearms,,Medium: Under one hand
+Model 2,Tattoo removal,Forearms,,Large: Under two hands
+Model 2,Tattoo removal,Forearms,,Extra Large: Under three hands
+Model 2,Tattoo removal,Forearms,,Full Area
+Model 2,Tattoo removal,Hands back,,Small: Under two fingers
+Model 2,Tattoo removal,Hands back,,Medium: Under one hand
+Model 2,Tattoo removal,Hands back,,Full Area
+Model 2,Tattoo removal,Hands palm,,Small: Under two fingers
+Model 2,Tattoo removal,Hands palm,,Medium: Under one hand
+Model 2,Tattoo removal,Hands palm,,Full Area
+Model 2,Tattoo removal,Thighs,,Small: Under two fingers
+Model 2,Tattoo removal,Thighs,,Medium: Under one hand
+Model 2,Tattoo removal,Thighs,,Large: Under two hands
+Model 2,Tattoo removal,Thighs,,Extra Large: Under three hands
+Model 2,Tattoo removal,Thighs,,Full Area
+Model 2,Tattoo removal,Knees,,Small: Under two fingers
+Model 2,Tattoo removal,Knees,,Medium: Under one hand
+Model 2,Tattoo removal,Knees,,Large: Under two hands
+Model 2,Tattoo removal,Knees,,Full Area
+Model 2,Tattoo removal,Legs,,Small: Under two fingers
+Model 2,Tattoo removal,Legs,,Medium: Under one hand
+Model 2,Tattoo removal,Legs,,Large: Under two hands
+Model 2,Tattoo removal,Legs,,Extra Large: Under three hands
+Model 2,Tattoo removal,Legs,,Full Area
+Model 2,Tattoo removal,Ankles,,Small: Under two fingers
+Model 2,Tattoo removal,Ankles,,Medium: Under one hand
+Model 2,Tattoo removal,Ankles,,Large: Under two hands
+Model 2,Tattoo removal,Ankles,,Full Area
+Model 2,Tattoo removal,Feet,,Small: Under two fingers
+Model 2,Tattoo removal,Feet,,Medium: Under one hand
+Model 2,Tattoo removal,Feet,,Large: Under two hands
+Model 2,Tattoo removal,Feet,,Full Area
+Model 2,Tattoo removal,Back,,Small: Under two fingers
+Model 2,Tattoo removal,Back,,Medium: Under one hand
+Model 2,Tattoo removal,Back,,Large: Under two hands
+Model 2,Tattoo removal,Back,,Extra Large: Under three hands
+Model 2,Tattoo removal,Back,,Full Area
+Model 2,Tattoo removal,Lower Back,,Small: Under two fingers
+Model 2,Tattoo removal,Lower Back,,Medium: Under one hand
+Model 2,Tattoo removal,Lower Back,,Large: Under two hands
+Model 2,Tattoo removal,Lower Back,,Extra Large: Under three hands
+Model 2,Tattoo removal,Lower Back,,Full Area
+Model 2,Tattoo removal,Buttocks,,Small: Under two fingers
+Model 2,Tattoo removal,Buttocks,,Medium: Under one hand
+Model 2,Tattoo removal,Buttocks,,Large: Under two hands
+Model 2,Tattoo removal,Buttocks,,Extra Large: Under three hands
+Model 2,Tattoo removal,Buttocks,,Full Area
+Model 2,Odor / Sweating,Scalp,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Scalp,,Odor - Seborrheic Dermatitis
+Model 2,Odor / Sweating,Scalp,,Odor - Folliculitis
+Model 2,Odor / Sweating,Face,Forehead,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Face,Forehead,Odor - Seborrheic Dermatitis
+Model 2,Odor / Sweating,Face,Temples,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Face,Temples,Odor - Seborrheic Dermatitis
+Model 2,Odor / Sweating,Face,Ears,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Face,Ears,Odor - Otitis Externa (Swimmer's Ear)
+Model 2,Odor / Sweating,Face,Eyebrows,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Face,Eyebrows,Odor - Seborrheic Dermatitis
+Model 2,Odor / Sweating,Face,Eyelids,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Face,Eyelids,Odor - Blepharitis
+Model 2,Odor / Sweating,Face,Nose,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Face,Nose,Odor - Rhinitis
+Model 2,Odor / Sweating,Face,Cheeks,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Face,Cheeks,Odor - Seborrheic Dermatitis
+Model 2,Odor / Sweating,Face,Lips,Odor - Dental & Oral Condition
+Model 2,Odor / Sweating,Face,Lips,Odor - Candidiasis
+Model 2,Odor / Sweating,Face,Jaw,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Face,Jaw,Odor - Seborrheic Dermatitis
+Model 2,Odor / Sweating,Neck,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Neck,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Neck,,Odor - Intertrigo
+Model 2,Odor / Sweating,Shoulders,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Shoulders,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Chest,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Chest,,Odor - Tinea Versicolor
+Model 2,Odor / Sweating,Chest,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Chest,,Odor - Intertrigo
+Model 2,Odor / Sweating,Chest,,Odor - Seborrheic Dermatitis
+Model 2,Odor / Sweating,Abdomen,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Abdomen,,Odor - Intertrigo
+Model 2,Odor / Sweating,Abdomen,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Lower abdomen,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Lower abdomen,,Odor - Candidiasis
+Model 2,Odor / Sweating,Lower abdomen,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Lower abdomen,,Odor - Intertrigo
+Model 2,Odor / Sweating,Intimate area,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Intimate area,,Odor - Bacterial Vaginosis
+Model 2,Odor / Sweating,Intimate area,,Odor - Trichomoniasis
+Model 2,Odor / Sweating,Intimate area,,Odor - Candidiasis
+Model 2,Odor / Sweating,Intimate area,,Odor - Urinary Incontinence
+Model 2,Odor / Sweating,Intimate area,,Odor - Hemorrhoids
+Model 2,Odor / Sweating,Intimate area,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Armpits,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Armpits,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Armpits,,Odor - Trichomoniasis
+Model 2,Odor / Sweating,Armpits,,Odor - Intertrigo
+Model 2,Odor / Sweating,Armpits,,Odor - Candidiasis
+Model 2,Odor / Sweating,Upper arms,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Upper arms,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Elbows,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Elbows,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Forearms,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Forearms,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Hands back,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Hands back,,Odor - Xerosis (Dry Skin)
+Model 2,Odor / Sweating,Hands palm,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Hands palm,,Odor - Hand Eczema
+Model 2,Odor / Sweating,Hands palm,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Thighs,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Thighs,,Odor - Intertrigo
+Model 2,Odor / Sweating,Thighs,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Knees,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Knees,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Legs,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Legs,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Ankles,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Ankles,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Feet,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Feet,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Feet,,Odor - Athlete's Foot (Tinea Pedis)
+Model 2,Odor / Sweating,Back,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Back,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Back,,Odor - Acne
+Model 2,Odor / Sweating,Back,,Odor - Intertrigo
+Model 2,Odor / Sweating,Lower Back,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Lower Back,,Odor - Intertrigo
+Model 2,Odor / Sweating,Lower Back,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Buttocks,,Sweat - Hyperhidrosis
+Model 2,Odor / Sweating,Buttocks,,Odor - Intertrigo
+Model 2,Odor / Sweating,Buttocks,,Odor - Bromhidrosis
+Model 2,Odor / Sweating,Buttocks,,Odor - Candidiasis
+Model 2,Hair,Scalp,,Loss/Thinning - Alopetia Totalis
+Model 2,Hair,Scalp,,Excess/Contouring
+Model 2,Hair,Scalp,,Loss/Thinning - Androgenetic Alopecia
+Model 2,Hair,Scalp,,Loss/Baldness - Androgenetic Alopecia
+Model 2,Hair,Scalp,,Loss - Traction Alopecia
+Model 2,Hair,Scalp,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Scalp,,Loss - Telogen Effluvium
+Model 2,Hair,Scalp,,Loss - Cicatricial Alopecia
+Model 2,Hair,Scalp,,Loss - Trichotillomania
+Model 2,Hair,Scalp,,Other - Dandruff
+Model 2,Hair,Face,Forehead,Excess or Hypertrichosis
+Model 2,Hair,Face,Forehead,Excess/Contouring
+Model 2,Hair,Face,Temples,Excess/Contouring
+Model 2,Hair,Face,Temples,Excess - Hirsutism (Women)
+Model 2,Hair,Face,Temples,Excess or Hypertrichosis
+Model 2,Hair,Face,Temples,Loss/Thinning - Androgenetic Alopecia
+Model 2,Hair,Face,Temples,Loss - Trichotillomania
+Model 2,Hair,Face,Temples,Loss/Baldness - Androgenetic Alopecia
+Model 2,Hair,Face,Temples,Loss - Traction Alopecia
+Model 2,Hair,Face,Temples,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Face,Temples,Loss - Telogen Effluvium
+Model 2,Hair,Face,Temples,Loss - Cicatricial Alopecia
+Model 2,Hair,Face,Ears,Excess or Hypertrichosis
+Model 2,Hair,Face,Eyebrows,Loss - Madarosis
+Model 2,Hair,Face,Eyebrows,Loss - Trichotillomania
+Model 2,Hair,Face,Eyebrows,Loss - Telogen Effluvium
+Model 2,Hair,Face,Eyebrows,Excess/Contouring
+Model 2,Hair,Face,Eyebrows,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Face,Eyebrows,Loss - Cicatricial Alopecia
+Model 2,Hair,Face,Eyelids,Excess - Distichiasis
+Model 2,Hair,Face,Eyelids,Loss - Telogen Effluvium
+Model 2,Hair,Face,Eyelashes,Loss - Madarosis
+Model 2,Hair,Face,Eyelashes,Loss - Trichotillomania
+Model 2,Hair,Face,Eyelashes,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Face,Eyelashes,Loss - Telogen Effluvium
+Model 2,Hair,Face,Eyelashes,Loss - Cicatricial Alopecia
+Model 2,Hair,Face,Nose,Excess or Hypertrichosis
+Model 2,Hair,Face,Nostrils,Excess - Hirsutism (Women)
+Model 2,Hair,Face,Nostrils,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Face,Nostrils,Excess or Hypertrichosis
+Model 2,Hair,Face,Cheeks,Excess or Hypertrichosis
+Model 2,Hair,Face,Cheeks,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Face,Cheeks,Excess/Contouring
+Model 2,Hair,Face,Mouth,Excess - Hirsutism (Women)
+Model 2,Hair,Face,Mouth,Excess or Hypertrichosis
+Model 2,Hair,Face,Mouth,Excess/Contouring
+Model 2,Hair,Face,Mouth,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Face,Mouth,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Face,Mouth,Other - Folliculitis
+Model 2,Hair,Face,Mouth,Loss - Telogen Effluvium
+Model 2,Hair,Face,Mouth,Loss - Cicatricial Alopecia
+Model 2,Hair,Face,Mouth,Loss - Trichotillomania
+Model 2,Hair,Face,Jaw,Loss - Patchy/Uneven Beard
+Model 2,Hair,Face,Jaw,Loss - Trichotillomania
+Model 2,Hair,Face,Jaw,Loss - Traction Alopecia
+Model 2,Hair,Face,Jaw,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Face,Jaw,Loss - Telogen Effluvium
+Model 2,Hair,Face,Jaw,Excess/Contouring
+Model 2,Hair,Face,Jaw,Excess - Hirsutism (Women)
+Model 2,Hair,Face,Jaw,Excess or Hypertrichosis
+Model 2,Hair,Face,Jaw,Loss - Cicatricial Alopecia
+Model 2,Hair,Face,Jaw,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Face,Jaw,Other - Folliculitis
+Model 2,Hair,Neck,,Excess or Hypertrichosis
+Model 2,Hair,Neck,,Excess/Contouring
+Model 2,Hair,Neck,,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Neck,,Other - Folliculitis
+Model 2,Hair,Shoulders,,Excess or Hypertrichosis
+Model 2,Hair,Chest,,Excess - Hirsutism (Women)
+Model 2,Hair,Chest,,Excess or Hypertrichosis
+Model 2,Hair,Chest,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Chest,,Loss - Trichotillomania
+Model 2,Hair,Chest,,Loss - Telogen Effluvium
+Model 2,Hair,Chest,,Loss - Cicatricial Alopecia
+Model 2,Hair,Chest,,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Chest,,Other - Folliculitis
+Model 2,Hair,Abdomen,,Excess - Hirsutism (Women)
+Model 2,Hair,Abdomen,,Loss - Trichotillomania
+Model 2,Hair,Abdomen,,Excess or Hypertrichosis
+Model 2,Hair,Abdomen,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Abdomen,,Loss - Telogen Effluvium
+Model 2,Hair,Abdomen,,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Abdomen,,Other - Folliculitis
+Model 2,Hair,Abdomen,,Loss - Cicatricial Alopecia
+Model 2,Hair,Lower abdomen,,Excess - Hirsutism (Women)
+Model 2,Hair,Lower abdomen,,Excess or Hypertrichosis
+Model 2,Hair,Lower abdomen,,Loss - Trichotillomania
+Model 2,Hair,Lower abdomen,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Lower abdomen,,Loss - Telogen Effluvium
+Model 2,Hair,Lower abdomen,,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Lower abdomen,,Other - Folliculitis
+Model 2,Hair,Lower abdomen,,Loss - Cicatricial Alopecia
+Model 2,Hair,Intimate area,,Excess - Hirsutism (Women)
+Model 2,Hair,Intimate area,,Excess/Contouring
+Model 2,Hair,Intimate area,,Excess or Hypertrichosis
+Model 2,Hair,Intimate area,,Loss - Trichotillomania
+Model 2,Hair,Intimate area,,Loss - Telogen Effluvium
+Model 2,Hair,Intimate area,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Intimate area,,Other - Folliculitis
+Model 2,Hair,Intimate area,,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Intimate area,,Loss - Cicatricial Alopecia
+Model 2,Hair,Armpits,,Excess - Hirsutism (Women)
+Model 2,Hair,Armpits,,Excess or Hypertrichosis
+Model 2,Hair,Armpits,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Armpits,,Loss - Trichotillomania
+Model 2,Hair,Armpits,,Loss - Telogen Effluvium
+Model 2,Hair,Armpits,,Loss - Cicatricial Alopecia
+Model 2,Hair,Armpits,,Other - Folliculitis
+Model 2,Hair,Armpits,,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Upper arms,,Excess - Hirsutism (Women)
+Model 2,Hair,Upper arms,,Excess or Hypertrichosis
+Model 2,Hair,Upper arms,,Other - Folliculitis
+Model 2,Hair,Upper arms,,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Upper arms,,Loss - Trichotillomania
+Model 2,Hair,Upper arms,,Loss - Telogen Effluvium
+Model 2,Hair,Upper arms,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Upper arms,,Loss - Cicatricial Alopecia
+Model 2,Hair,Elbows,,Excess - Hirsutism (Women)
+Model 2,Hair,Elbows,,Loss - Trichotillomania
+Model 2,Hair,Elbows,,Other - Folliculitis
+Model 2,Hair,Elbows,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Elbows,,Loss - Telogen Effluvium
+Model 2,Hair,Elbows,,Loss - Cicatricial Alopecia
+Model 2,Hair,Elbows,,Excess or Hypertrichosis
+Model 2,Hair,Forearms,,Excess - Hirsutism (Women)
+Model 2,Hair,Forearms,,Loss - Telogen Effluvium
+Model 2,Hair,Forearms,,Excess or Hypertrichosis
+Model 2,Hair,Forearms,,Loss - Trichotillomania
+Model 2,Hair,Forearms,,Other - Folliculitis
+Model 2,Hair,Forearms,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Forearms,,Loss - Cicatricial Alopecia
+Model 2,Hair,Hands back,,Excess - Hirsutism (Women)
+Model 2,Hair,Hands back,,Loss - Cicatricial Alopecia
+Model 2,Hair,Hands back,,Loss - Trichotillomania
+Model 2,Hair,Hands back,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Hands back,,Loss - Telogen Effluvium
+Model 2,Hair,Hands back,,Excess or Hypertrichosis
+Model 2,Hair,Hands palm,,Excess or Hypertrichosis
+Model 2,Hair,Thighs,,Excess or Hypertrichosis
+Model 2,Hair,Thighs,,Excess - Hirsutism (Women)
+Model 2,Hair,Thighs,,Loss - Trichotillomania
+Model 2,Hair,Thighs,,Loss - Telogen Effluvium
+Model 2,Hair,Thighs,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Thighs,,Loss - Cicatricial Alopecia
+Model 2,Hair,Thighs,,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Thighs,,Other - Folliculitis
+Model 2,Hair,Knees,,Excess or Hypertrichosis
+Model 2,Hair,Knees,,Excess - Hirsutism (Women)
+Model 2,Hair,Knees,,Loss - Trichotillomania
+Model 2,Hair,Knees,,Other - Folliculitis
+Model 2,Hair,Knees,,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Knees,,Loss - Telogen Effluvium
+Model 2,Hair,Knees,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Knees,,Loss - Cicatricial Alopecia
+Model 2,Hair,Legs,,Excess or Hypertrichosis
+Model 2,Hair,Legs,,Excess - Hirsutism (Women)
+Model 2,Hair,Legs,,Loss - Telogen Effluvium
+Model 2,Hair,Legs,,Loss - Trichotillomania
+Model 2,Hair,Legs,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Legs,,Loss - Cicatricial Alopecia
+Model 2,Hair,Legs,,Other - Folliculitis
+Model 2,Hair,Ankles,,Excess - Hirsutism (Women)
+Model 2,Hair,Ankles,,Excess or Hypertrichosis
+Model 2,Hair,Ankles,,Loss - Trichotillomania
+Model 2,Hair,Ankles,,Loss - Telogen Effluvium
+Model 2,Hair,Ankles,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Ankles,,Loss - Cicatricial Alopecia
+Model 2,Hair,Feet,,Excess - Hirsutism (Women)
+Model 2,Hair,Feet,,Loss - Telogen Effluvium
+Model 2,Hair,Feet,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Feet,,Loss - Cicatricial Alopecia
+Model 2,Hair,Feet,,Loss - Trichotillomania
+Model 2,Hair,Feet,,Excess or Hypertrichosis
+Model 2,Hair,Back,,Excess - Hirsutism (Women)
+Model 2,Hair,Back,,Excess or Hypertrichosis
+Model 2,Hair,Back,,Loss - Telogen Effluvium
+Model 2,Hair,Back,,Loss - Trichotillomania
+Model 2,Hair,Back,,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Back,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Back,,Loss - Cicatricial Alopecia
+Model 2,Hair,Back,,Other - Folliculitis
+Model 2,Hair,Lower Back,,Excess - Hirsutism (Women)
+Model 2,Hair,Lower Back,,Excess or Hypertrichosis
+Model 2,Hair,Lower Back,,Loss - Trichotillomania
+Model 2,Hair,Lower Back,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Lower Back,,Loss - Cicatricial Alopecia
+Model 2,Hair,Lower Back,,Loss - Telogen Effluvium
+Model 2,Hair,Lower Back,,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Lower Back,,Other - Folliculitis
+Model 2,Hair,Buttocks,,Excess - Hirsutism (Women)
+Model 2,Hair,Buttocks,,Excess or Hypertrichosis
+Model 2,Hair,Buttocks,,Loss - Telogen Effluvium
+Model 2,Hair,Buttocks,,Loss - Trichotillomania
+Model 2,Hair,Buttocks,,Loss/Thinning - Alopecia Areata
+Model 2,Hair,Buttocks,,Loss - Cicatricial Alopecia
+Model 2,Hair,Buttocks,,Other - Ingrown Hair (Pseudofolliculitis)
+Model 2,Hair,Buttocks,,Other - Folliculitis
+Model 4,Dental,Gums,,Excessive Gum Tissue (Gummy Smile)
+Model 4,Dental,Gums,,Gum Recession
+Model 4,Dental,Gums,,Gummy Smile
+Model 4,Dental,Gums,,Uneven Gum Line
+Model 4,Dental,Teeth,,Stained Teeth
+Model 4,Dental,Teeth,,Deep Stained Teeth
+Model 4,Dental,Teeth,,Yellow Teeth
+Model 4,Dental,Teeth,,Internal Tooth Discoloration
+Model 4,Dental,Teeth,,Tartar Buildup
+Model 4,Dental,Teeth,,Chipped/Cracked Teeth
+Model 4,Dental,Teeth,,Enamel Erosion
+Model 4,Dental,Teeth,,Tooth Decay
+Model 4,Dental,Teeth,,Major Misalignment
+Model 4,Dental,Teeth,,Minor Misalignment
+Model 4,Dental,Teeth,,Gaps in Teeth
+Model 4,Dental,Teeth,,Missing Teeth
+Model 4,Dental,Teeth,,Short Teeth
+Model 4,Dental,Teeth,,Uneven Teeth
+Model 4,Dental,Teeth,,Worn-down Teeth
+Model 4,Dental,Teeth,,Tooth Shape Concerns

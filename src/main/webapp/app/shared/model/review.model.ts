@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 export interface IReview {
   id?: number;
   title?: string;
-  description?: string;
+  description?: string | null;
   rate?: number | null;
   timestamp?: dayjs.Dayjs;
 }

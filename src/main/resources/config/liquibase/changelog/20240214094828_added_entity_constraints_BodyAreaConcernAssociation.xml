@@ -6,7 +6,7 @@
     <!--
         Added the constraints for entity BodyAreaConcernAssociation.
     -->
-    <changeSet id="20240214045512-2" author="jhipster">
+    <changeSet id="20240214094828-2" author="jhipster">
 
         <addForeignKeyConstraint baseColumnNames="body_area_id"
                                  baseTableName="body_area_concern_association"

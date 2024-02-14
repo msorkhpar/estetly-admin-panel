@@ -24,8 +24,7 @@ public class BodyArea implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @NotNull
-    @Column(name = "code", nullable = false)
+    @Column(name = "code")
     private String code;
 
     @NotNull

@@ -29,7 +29,7 @@ public class Procedure implements Serializable {
     private String title;
 
     @Lob
-    @Column(name = "description", nullable = false)
+    @Column(name = "description")
     private String description;
 
     @Lob

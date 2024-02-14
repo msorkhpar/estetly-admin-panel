@@ -98,16 +98,7 @@ export const BodyAreaUpdate = () => {
                   validate={{ required: true }}
                 />
               ) : null}
-              <ValidatedField
-                label={translate('estetlyApp.bodyArea.code')}
-                id="body-area-code"
-                name="code"
-                data-cy="code"
-                type="text"
-                validate={{
-                  required: { value: true, message: translate('entity.validation.required') },
-                }}
-              />
+              <ValidatedField label={translate('estetlyApp.bodyArea.code')} id="body-area-code" name="code" data-cy="code" type="text" />
               <ValidatedField
                 label={translate('estetlyApp.bodyArea.displayName')}
                 id="body-area-displayName"

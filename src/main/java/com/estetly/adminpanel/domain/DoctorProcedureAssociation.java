@@ -31,7 +31,7 @@ public class DoctorProcedureAssociation implements Serializable {
     private String pictureContentType;
 
     @Lob
-    @Column(name = "description", nullable = false)
+    @Column(name = "description")
     private String description;
 
     @Column(name = "cost")

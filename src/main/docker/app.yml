@@ -2,7 +2,7 @@
 name: estetly
 services:
   app:
-    image: estetly
+    image: sorkhpar/estetly-admin-panel
     environment:
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - SPRING_PROFILES_ACTIVE=prod,api-docs

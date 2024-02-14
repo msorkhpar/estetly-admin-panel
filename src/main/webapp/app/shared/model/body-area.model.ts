@@ -1,6 +1,6 @@
 export interface IBodyArea {
   id?: number;
-  code?: string;
+  code?: string | null;
   displayName?: string;
   parent?: IBodyArea | null;
 }

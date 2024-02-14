@@ -6,7 +6,7 @@
     <!--
         Added the constraints for entity Concern.
     -->
-    <changeSet id="20240214045412-2" author="jhipster">
+    <changeSet id="20240214094827-2" author="jhipster">
 
         <addForeignKeyConstraint baseColumnNames="category_id"
                                  baseTableName="concern"

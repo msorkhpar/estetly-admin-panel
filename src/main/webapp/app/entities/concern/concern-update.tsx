@@ -138,9 +138,6 @@ export const ConcernUpdate = () => {
                 name="description"
                 data-cy="description"
                 type="textarea"
-                validate={{
-                  required: { value: true, message: translate('entity.validation.required') },
-                }}
               />
               <ValidatedBlobField
                 label={translate('estetlyApp.concern.picture')}

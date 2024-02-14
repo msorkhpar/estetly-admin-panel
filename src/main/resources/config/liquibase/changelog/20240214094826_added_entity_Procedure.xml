@@ -7,24 +7,18 @@
                         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <!--
-        Added the entity Concern.
+        Added the entity Procedure.
     -->
-    <changeSet id="20240214045412-1" author="jhipster">
-        <createTable tableName="concern">
+    <changeSet id="20240214094826-1" author="jhipster">
+        <createTable tableName="procedure">
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="title" type="varchar(255)">
+            <column name="title" type="varchar(254)">
                 <constraints nullable="false" />
-            </column>
-            <column name="gender" type="varchar(255)">
-                <constraints nullable="false" />
-            </column>
-            <column name="other_names" type="varchar(255)">
-                <constraints nullable="true" />
             </column>
             <column name="description" type="${clobType}">
-                <constraints nullable="false" />
+                <constraints nullable="true" />
             </column>
             <column name="picture" type="${blobType}">
                 <constraints nullable="true" />
@@ -32,7 +26,10 @@
             <column name="picture_content_type" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="category_id" type="bigint">
+            <column name="inventiveness" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="average_cost" type="double">
                 <constraints nullable="true" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
@@ -49,19 +46,19 @@
           This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
           Spring Boot configuration key.
     -->
-    <changeSet id="20240214045412-1-data" author="jhipster" context="faker">
+    <changeSet id="20240214094826-1-data" author="jhipster" context="faker">
         <loadData
-                  file="config/liquibase/fake-data/concern.csv"
+                  file="config/liquibase/fake-data/procedure.csv"
                   separator=";"
-                  tableName="concern"
+                  tableName="procedure"
                   usePreparedStatements="true">
             <column name="id" type="numeric"/>
             <column name="title" type="string"/>
-            <column name="gender" type="string"/>
-            <column name="other_names" type="string"/>
             <column name="description" type="clob"/>
             <column name="picture" type="blob"/>
             <column name="picture_content_type" type="string"/>
+            <column name="inventiveness" type="numeric"/>
+            <column name="average_cost" type="numeric"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
         </loadData>
     </changeSet>

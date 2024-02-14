@@ -6,7 +6,7 @@
     <!--
         Added the constraints for entity ConcernProcedureAssociation.
     -->
-    <changeSet id="20240214045612-2" author="jhipster">
+    <changeSet id="20240214094829-2" author="jhipster">
 
         <addForeignKeyConstraint baseColumnNames="procedure_id"
                                  baseTableName="concern_procedure_association"

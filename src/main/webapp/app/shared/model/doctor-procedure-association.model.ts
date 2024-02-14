@@ -5,7 +5,7 @@ export interface IDoctorProcedureAssociation {
   id?: number;
   pictureContentType?: string | null;
   picture?: string | null;
-  description?: string;
+  description?: string | null;
   cost?: number | null;
   procedure?: IProcedure;
   doctor?: IDoctor;

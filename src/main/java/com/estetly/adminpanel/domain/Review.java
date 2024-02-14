@@ -30,7 +30,7 @@ public class Review implements Serializable {
     private String title;
 
     @Lob
-    @Column(name = "description", nullable = false)
+    @Column(name = "description")
     private String description;
 
     @Min(value = 1)

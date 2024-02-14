@@ -6,7 +6,7 @@ export interface IConcern {
   title?: string;
   gender?: keyof typeof Gender;
   otherNames?: string | null;
-  description?: string;
+  description?: string | null;
   pictureContentType?: string | null;
   picture?: string | null;
   category?: ICategory | null;

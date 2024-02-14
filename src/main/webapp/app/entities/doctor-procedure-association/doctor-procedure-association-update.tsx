@@ -124,9 +124,6 @@ export const DoctorProcedureAssociationUpdate = () => {
                 name="description"
                 data-cy="description"
                 type="textarea"
-                validate={{
-                  required: { value: true, message: translate('entity.validation.required') },
-                }}
               />
               <ValidatedField
                 label={translate('estetlyApp.doctorProcedureAssociation.cost')}

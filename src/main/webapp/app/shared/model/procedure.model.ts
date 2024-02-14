@@ -1,7 +1,7 @@
 export interface IProcedure {
   id?: number;
   title?: string;
-  description?: string;
+  description?: string | null;
   pictureContentType?: string | null;
   picture?: string | null;
   inventiveness?: number | null;

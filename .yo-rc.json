@@ -27,7 +27,7 @@
     "jhipsterVersion": "8.1.0",
     "jwtSecretKey": "YjQ0MjFiNjMwMjI0YTRmZTBjZTU2YWVjMTU2ZGZhZTA5ZjBiM2IyMTcxNWU5ZDdkMjNiZTk1MDJhZDk5MmU4Nzg1M2MyZTFiM2M5NTUwM2NmOGY5ZDI5NDdhNGYxNTUxNTcwYmI3OWE0YTJiNGMzYThlZThjODhhMmQ3N2Q2Mjc=",
     "languages": ["en", "fr"],
-    "lastLiquibaseTimestamp": 1707886632000,
+    "lastLiquibaseTimestamp": 1707904110000,
     "nativeLanguage": "en",
     "packageFolder": "com/estetly/adminpanel",
     "packageName": "com.estetly.adminpanel",

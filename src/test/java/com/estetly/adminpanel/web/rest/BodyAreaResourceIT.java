@@ -127,23 +127,6 @@ class BodyAreaResourceIT {
 
     @Test
     @Transactional
-    void checkCodeIsRequired() throws Exception {
-        int databaseSizeBeforeTest = bodyAreaRepository.findAll().size();
-        // set the field null
-        bodyArea.setCode(null);
-
-        // Create the BodyArea, which fails.
-
-        restBodyAreaMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(bodyArea)))
-            .andExpect(status().isBadRequest());
-
-        List<BodyArea> bodyAreaList = bodyAreaRepository.findAll();
-        assertThat(bodyAreaList).hasSize(databaseSizeBeforeTest);
-    }
-
-    @Test
-    @Transactional
     void checkDisplayNameIsRequired() throws Exception {
         int databaseSizeBeforeTest = bodyAreaRepository.findAll().size();
         // set the field null

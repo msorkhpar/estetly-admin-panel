@@ -3,6 +3,8 @@ name: estetly
 services:
   postgresql:
     image: postgres:16.1
+    volumes:
+      - ~/postgresql/:/var/lib/postgresql/data/
     # volumes:
     #   - ~/volumes/jhipster/Estetly/postgresql/:/var/lib/postgresql/data/
     environment:
@@ -18,3 +20,15 @@ services:
     # remove the "127.0.0.1:" prefix
     ports:
       - 127.0.0.1:5432:5432
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    ports:
+      - '8888:80'
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@estetly.com
+      PGADMIN_DEFAULT_PASSWORD: 123456
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+volumes:
+  pgadmin-data:

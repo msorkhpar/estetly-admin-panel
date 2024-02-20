@@ -129,6 +129,9 @@ export const Review = () => {
                   <Translate contentKey="estetlyApp.review.timestamp">Timestamp</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('timestamp')} />
                 </th>
+                <th>
+                  <Translate contentKey="estetlyApp.review.procedure">Procedure</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
                 <th />
               </tr>
             </thead>
@@ -144,6 +147,7 @@ export const Review = () => {
                   <td>{review.description}</td>
                   <td>{review.rate}</td>
                   <td>{review.timestamp ? <TextFormat type="date" value={review.timestamp} format={APP_DATE_FORMAT} /> : null}</td>
+                  <td>{review.procedure ? <Link to={`/procedure/${review.procedure.id}`}>{review.procedure.title}</Link> : ''}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`/review/${review.id}`} color="info" size="sm" data-cy="entityDetailsButton">

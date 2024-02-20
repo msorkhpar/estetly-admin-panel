@@ -1,8 +1,11 @@
 package com.estetly.adminpanel.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -46,6 +49,11 @@ public class Procedure implements Serializable {
 
     @Column(name = "average_cost")
     private Double averageCost;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "procedure")
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    @JsonIgnoreProperties(value = { "procedure" }, allowSetters = true)
+    private Set<Review> reviews = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
@@ -138,6 +146,37 @@ public class Procedure implements Serializable {
 
     public void setAverageCost(Double averageCost) {
         this.averageCost = averageCost;
+    }
+
+    public Set<Review> getReviews() {
+        return this.reviews;
+    }
+
+    public void setReviews(Set<Review> reviews) {
+        if (this.reviews != null) {
+            this.reviews.forEach(i -> i.setProcedure(null));
+        }
+        if (reviews != null) {
+            reviews.forEach(i -> i.setProcedure(this));
+        }
+        this.reviews = reviews;
+    }
+
+    public Procedure reviews(Set<Review> reviews) {
+        this.setReviews(reviews);
+        return this;
+    }
+
+    public Procedure addReview(Review review) {
+        this.reviews.add(review);
+        review.setProcedure(this);
+        return this;
+    }
+
+    public Procedure removeReview(Review review) {
+        this.reviews.remove(review);
+        review.setProcedure(null);
+        return this;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here

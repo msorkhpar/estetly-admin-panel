@@ -8,6 +8,8 @@ import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateT
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
+import { IProcedure } from 'app/shared/model/procedure.model';
+import { getEntities as getProcedures } from 'app/entities/procedure/procedure.reducer';
 import { IReview } from 'app/shared/model/review.model';
 import { getEntity, updateEntity, createEntity, reset } from './review.reducer';
 
@@ -19,6 +21,7 @@ export const ReviewUpdate = () => {
   const { id } = useParams<'id'>();
   const isNew = id === undefined;
 
+  const procedures = useAppSelector(state => state.procedure.entities);
   const reviewEntity = useAppSelector(state => state.review.entity);
   const loading = useAppSelector(state => state.review.loading);
   const updating = useAppSelector(state => state.review.updating);
@@ -34,6 +37,8 @@ export const ReviewUpdate = () => {
     } else {
       dispatch(getEntity(id));
     }
+
+    dispatch(getProcedures({}));
   }, []);
 
   useEffect(() => {
@@ -55,6 +60,7 @@ export const ReviewUpdate = () => {
     const entity = {
       ...reviewEntity,
       ...values,
+      procedure: procedures.find(it => it.id.toString() === values.procedure.toString()),
     };
 
     if (isNew) {
@@ -72,6 +78,7 @@ export const ReviewUpdate = () => {
       : {
           ...reviewEntity,
           timestamp: convertDateTimeFromServer(reviewEntity.timestamp),
+          procedure: reviewEntity?.procedure?.id,
         };
 
   return (
@@ -140,6 +147,22 @@ export const ReviewUpdate = () => {
                   required: { value: true, message: translate('entity.validation.required') },
                 }}
               />
+              <ValidatedField
+                id="review-procedure"
+                name="procedure"
+                data-cy="procedure"
+                label={translate('estetlyApp.review.procedure')}
+                type="select"
+              >
+                <option value="" key="0" />
+                {procedures
+                  ? procedures.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.title}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
               <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/review" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;

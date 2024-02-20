@@ -54,6 +54,7 @@ public class CacheConfiguration {
             createCache(cm, com.estetly.adminpanel.domain.Doctor.class.getName());
             createCache(cm, com.estetly.adminpanel.domain.Review.class.getName());
             createCache(cm, com.estetly.adminpanel.domain.Procedure.class.getName());
+            createCache(cm, com.estetly.adminpanel.domain.Procedure.class.getName() + ".reviews");
             createCache(cm, com.estetly.adminpanel.domain.Concern.class.getName());
             createCache(cm, com.estetly.adminpanel.domain.BodyAreaConcernAssociation.class.getName());
             createCache(cm, com.estetly.adminpanel.domain.ConcernProcedureAssociation.class.getName());

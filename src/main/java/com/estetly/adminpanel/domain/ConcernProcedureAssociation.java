@@ -26,6 +26,7 @@ public class ConcernProcedureAssociation implements Serializable {
 
     @ManyToOne(optional = false)
     @NotNull
+    @JsonIgnoreProperties(value = { "reviews" }, allowSetters = true)
     private Procedure procedure;
 
     @ManyToOne(optional = false)

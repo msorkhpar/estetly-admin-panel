@@ -56,6 +56,10 @@ export const ReviewDetail = () => {
             </span>
           </dt>
           <dd>{reviewEntity.timestamp ? <TextFormat value={reviewEntity.timestamp} type="date" format={APP_DATE_FORMAT} /> : null}</dd>
+          <dt>
+            <Translate contentKey="estetlyApp.review.procedure">Procedure</Translate>
+          </dt>
+          <dd>{reviewEntity.procedure ? reviewEntity.procedure.title : ''}</dd>
         </dl>
         <Button tag={Link} to="/review" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}

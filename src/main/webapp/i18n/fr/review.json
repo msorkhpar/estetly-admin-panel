@@ -21,7 +21,8 @@
       "title": "Title",
       "description": "Description",
       "rate": "Rate",
-      "timestamp": "Timestamp"
+      "timestamp": "Timestamp",
+      "procedure": "Procedure"
     }
   }
 }

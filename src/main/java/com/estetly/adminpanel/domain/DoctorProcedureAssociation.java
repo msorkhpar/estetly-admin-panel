@@ -1,5 +1,6 @@
 package com.estetly.adminpanel.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -39,6 +40,7 @@ public class DoctorProcedureAssociation implements Serializable {
 
     @ManyToOne(optional = false)
     @NotNull
+    @JsonIgnoreProperties(value = { "reviews" }, allowSetters = true)
     private Procedure procedure;
 
     @ManyToOne(optional = false)

@@ -1,5 +1,6 @@
 package com.estetly.adminpanel.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -41,6 +42,10 @@ public class Review implements Serializable {
     @NotNull
     @Column(name = "timestamp", nullable = false)
     private ZonedDateTime timestamp;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnoreProperties(value = { "reviews" }, allowSetters = true)
+    private Procedure procedure;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
@@ -107,6 +112,19 @@ public class Review implements Serializable {
 
     public void setTimestamp(ZonedDateTime timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public Procedure getProcedure() {
+        return this.procedure;
+    }
+
+    public void setProcedure(Procedure procedure) {
+        this.procedure = procedure;
+    }
+
+    public Review procedure(Procedure procedure) {
+        this.setProcedure(procedure);
+        return this;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here

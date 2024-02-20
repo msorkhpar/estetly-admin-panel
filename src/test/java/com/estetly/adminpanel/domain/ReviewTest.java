@@ -1,5 +1,6 @@
 package com.estetly.adminpanel.domain;
 
+import static com.estetly.adminpanel.domain.ProcedureTestSamples.*;
 import static com.estetly.adminpanel.domain.ReviewTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -20,5 +21,17 @@ class ReviewTest {
 
         review2 = getReviewSample2();
         assertThat(review1).isNotEqualTo(review2);
+    }
+
+    @Test
+    void procedureTest() throws Exception {
+        Review review = getReviewRandomSampleGenerator();
+        Procedure procedureBack = getProcedureRandomSampleGenerator();
+
+        review.setProcedure(procedureBack);
+        assertThat(review.getProcedure()).isEqualTo(procedureBack);
+
+        review.procedure(null);
+        assertThat(review.getProcedure()).isNull();
     }
 }

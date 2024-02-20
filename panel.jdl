@@ -105,4 +105,5 @@ relationship ManyToOne {
 
 relationship OneToMany {
     Category to Concern{category(name)}
+    Procedure to Review{procedure(title)}
 }

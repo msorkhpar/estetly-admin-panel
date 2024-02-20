@@ -26,6 +26,9 @@
             <column name="timestamp" type="${datetimeType}">
                 <constraints nullable="false" />
             </column>
+            <column name="procedure_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
         </createTable>
         <dropDefaultValue tableName="review" columnName="timestamp" columnDataType="${datetimeType}"/>

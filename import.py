@@ -40,8 +40,8 @@ for index, row in df.iterrows():
         elif model == 'Model 4':
             model = "MODEL_4"
 
-        cursor.execute("INSERT INTO category (id,name, model) VALUES (%s,%s, %s) RETURNING id",
-                       (get_next_id(), category_name, model))
+        cursor.execute("INSERT INTO category (id,name, name_fr, model) VALUES (%s,%s,%s, %s) RETURNING id",
+                       (get_next_id(), category_name,category_name, model))
         category_id = cursor.fetchone()[0]
         categories[category_name] = category_id
         conn.commit()
@@ -52,8 +52,8 @@ for index, row in df.iterrows():
     area_name = row['AREA']
     area_id = None
     if area_name and area_name not in areas:
-        cursor.execute("INSERT INTO body_area (id, display_name) VALUES (%s, %s) RETURNING id",
-                       (get_next_id(), area_name))
+        cursor.execute("INSERT INTO body_area (id, display_name, display_name_fr) VALUES (%s, %s, %s) RETURNING id",
+                       (get_next_id(), area_name, area_name))
         area_id = cursor.fetchone()[0]
         areas[area_name] = area_id
         conn.commit()
@@ -67,8 +67,8 @@ for index, row in df.iterrows():
     if type(sub_area_name) is str:
         if sub_area_name not in sub_areas:
             parent_id = area_id if area_name else None
-            cursor.execute("INSERT INTO body_area (id, display_name, parent_id) VALUES (%s, %s, %s) RETURNING id",
-                           (get_next_id(), sub_area_name, parent_id))
+            cursor.execute("INSERT INTO body_area (id, display_name, display_name_fr, parent_id) VALUES (%s, %s, %s, %s) RETURNING id",
+                           (get_next_id(), sub_area_name, sub_area_name, parent_id))
             sub_area_id = cursor.fetchone()[0]
             sub_areas[sub_area_name] = sub_area_id
             conn.commit()
@@ -80,8 +80,8 @@ for index, row in df.iterrows():
     concern_id = None
     if concern_name and concern_name not in concerns:
         # Assuming 'Concern' has 'title', 'category_id' and 'area_id' columns
-        cursor.execute("INSERT INTO concern (id, title, category_id, gender) VALUES (%s, %s, %s, %s) RETURNING id",
-                       (get_next_id(), concern_name, category_id, "ALL"))
+        cursor.execute("INSERT INTO concern (id, title, title_fr, category_id, gender) VALUES (%s, %s, %s, %s, %s) RETURNING id",
+                       (get_next_id(), concern_name, concern_name, category_id, "ALL"))
         concern_id = cursor.fetchone()[0]
         concerns[concern_name] = concern_id
         conn.commit()

@@ -32,6 +32,10 @@ public class Category implements Serializable {
     private String name;
 
     @NotNull
+    @Column(name = "name_fr", nullable = false)
+    private String nameFr;
+
+    @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "model", nullable = false)
     private Models model;
@@ -67,6 +71,19 @@ public class Category implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getNameFr() {
+        return this.nameFr;
+    }
+
+    public Category nameFr(String nameFr) {
+        this.setNameFr(nameFr);
+        return this;
+    }
+
+    public void setNameFr(String nameFr) {
+        this.nameFr = nameFr;
     }
 
     public Models getModel() {
@@ -138,6 +155,7 @@ public class Category implements Serializable {
         return "Category{" +
             "id=" + getId() +
             ", name='" + getName() + "'" +
+            ", nameFr='" + getNameFr() + "'" +
             ", model='" + getModel() + "'" +
             "}";
     }

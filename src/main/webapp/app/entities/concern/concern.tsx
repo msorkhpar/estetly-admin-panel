@@ -91,6 +91,10 @@ export const Concern = () => {
                   <Translate contentKey="estetlyApp.concern.title">Title</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('title')} />
                 </th>
+                <th className="hand" onClick={sort('titleFr')}>
+                  <Translate contentKey="estetlyApp.concern.titleFr">Title Fr</Translate>{' '}
+                  <FontAwesomeIcon icon={getSortIconByFieldName('titleFr')} />
+                </th>
                 <th className="hand" onClick={sort('gender')}>
                   <Translate contentKey="estetlyApp.concern.gender">Gender</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('gender')} />
@@ -99,9 +103,17 @@ export const Concern = () => {
                   <Translate contentKey="estetlyApp.concern.otherNames">Other Names</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('otherNames')} />
                 </th>
+                <th className="hand" onClick={sort('otherNamesFr')}>
+                  <Translate contentKey="estetlyApp.concern.otherNamesFr">Other Names Fr</Translate>{' '}
+                  <FontAwesomeIcon icon={getSortIconByFieldName('otherNamesFr')} />
+                </th>
                 <th className="hand" onClick={sort('description')}>
                   <Translate contentKey="estetlyApp.concern.description">Description</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('description')} />
+                </th>
+                <th className="hand" onClick={sort('descriptionFr')}>
+                  <Translate contentKey="estetlyApp.concern.descriptionFr">Description Fr</Translate>{' '}
+                  <FontAwesomeIcon icon={getSortIconByFieldName('descriptionFr')} />
                 </th>
                 <th className="hand" onClick={sort('picture')}>
                   <Translate contentKey="estetlyApp.concern.picture">Picture</Translate>{' '}
@@ -122,11 +134,14 @@ export const Concern = () => {
                     </Button>
                   </td>
                   <td>{concern.title}</td>
+                  <td>{concern.titleFr}</td>
                   <td>
                     <Translate contentKey={`estetlyApp.Gender.${concern.gender}`} />
                   </td>
                   <td>{concern.otherNames}</td>
+                  <td>{concern.otherNamesFr}</td>
                   <td>{concern.description}</td>
+                  <td>{concern.descriptionFr}</td>
                   <td>
                     {concern.picture ? (
                       <div>

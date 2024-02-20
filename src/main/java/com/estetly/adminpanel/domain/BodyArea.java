@@ -31,6 +31,10 @@ public class BodyArea implements Serializable {
     @Column(name = "display_name", nullable = false)
     private String displayName;
 
+    @NotNull
+    @Column(name = "display_name_fr", nullable = false)
+    private String displayNameFr;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties(value = { "parent" }, allowSetters = true)
     private BodyArea parent;
@@ -76,6 +80,19 @@ public class BodyArea implements Serializable {
         this.displayName = displayName;
     }
 
+    public String getDisplayNameFr() {
+        return this.displayNameFr;
+    }
+
+    public BodyArea displayNameFr(String displayNameFr) {
+        this.setDisplayNameFr(displayNameFr);
+        return this;
+    }
+
+    public void setDisplayNameFr(String displayNameFr) {
+        this.displayNameFr = displayNameFr;
+    }
+
     public BodyArea getParent() {
         return this.parent;
     }
@@ -115,6 +132,7 @@ public class BodyArea implements Serializable {
             "id=" + getId() +
             ", code='" + getCode() + "'" +
             ", displayName='" + getDisplayName() + "'" +
+            ", displayNameFr='" + getDisplayNameFr() + "'" +
             "}";
     }
 }

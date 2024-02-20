@@ -117,9 +117,17 @@ export const Procedure = () => {
                   <Translate contentKey="estetlyApp.procedure.title">Title</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('title')} />
                 </th>
+                <th className="hand" onClick={sort('titleFr')}>
+                  <Translate contentKey="estetlyApp.procedure.titleFr">Title Fr</Translate>{' '}
+                  <FontAwesomeIcon icon={getSortIconByFieldName('titleFr')} />
+                </th>
                 <th className="hand" onClick={sort('description')}>
                   <Translate contentKey="estetlyApp.procedure.description">Description</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('description')} />
+                </th>
+                <th className="hand" onClick={sort('descriptionFr')}>
+                  <Translate contentKey="estetlyApp.procedure.descriptionFr">Description Fr</Translate>{' '}
+                  <FontAwesomeIcon icon={getSortIconByFieldName('descriptionFr')} />
                 </th>
                 <th className="hand" onClick={sort('picture')}>
                   <Translate contentKey="estetlyApp.procedure.picture">Picture</Translate>{' '}
@@ -145,7 +153,9 @@ export const Procedure = () => {
                     </Button>
                   </td>
                   <td>{procedure.title}</td>
+                  <td>{procedure.titleFr}</td>
                   <td>{procedure.description}</td>
+                  <td>{procedure.descriptionFr}</td>
                   <td>
                     {procedure.picture ? (
                       <div>

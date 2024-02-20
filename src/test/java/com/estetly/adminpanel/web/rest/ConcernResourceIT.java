@@ -42,14 +42,23 @@ class ConcernResourceIT {
     private static final String DEFAULT_TITLE = "AAAAAAAAAA";
     private static final String UPDATED_TITLE = "BBBBBBBBBB";
 
+    private static final String DEFAULT_TITLE_FR = "AAAAAAAAAA";
+    private static final String UPDATED_TITLE_FR = "BBBBBBBBBB";
+
     private static final Gender DEFAULT_GENDER = Gender.FEMALE;
     private static final Gender UPDATED_GENDER = Gender.MALE;
 
     private static final String DEFAULT_OTHER_NAMES = "AAAAAAAAAA";
     private static final String UPDATED_OTHER_NAMES = "BBBBBBBBBB";
 
+    private static final String DEFAULT_OTHER_NAMES_FR = "AAAAAAAAAA";
+    private static final String UPDATED_OTHER_NAMES_FR = "BBBBBBBBBB";
+
     private static final String DEFAULT_DESCRIPTION = "AAAAAAAAAA";
     private static final String UPDATED_DESCRIPTION = "BBBBBBBBBB";
+
+    private static final String DEFAULT_DESCRIPTION_FR = "AAAAAAAAAA";
+    private static final String UPDATED_DESCRIPTION_FR = "BBBBBBBBBB";
 
     private static final byte[] DEFAULT_PICTURE = TestUtil.createByteArray(1, "0");
     private static final byte[] UPDATED_PICTURE = TestUtil.createByteArray(1, "1");
@@ -85,9 +94,12 @@ class ConcernResourceIT {
     public static Concern createEntity(EntityManager em) {
         Concern concern = new Concern()
             .title(DEFAULT_TITLE)
+            .titleFr(DEFAULT_TITLE_FR)
             .gender(DEFAULT_GENDER)
             .otherNames(DEFAULT_OTHER_NAMES)
+            .otherNamesFr(DEFAULT_OTHER_NAMES_FR)
             .description(DEFAULT_DESCRIPTION)
+            .descriptionFr(DEFAULT_DESCRIPTION_FR)
             .picture(DEFAULT_PICTURE)
             .pictureContentType(DEFAULT_PICTURE_CONTENT_TYPE);
         return concern;
@@ -102,9 +114,12 @@ class ConcernResourceIT {
     public static Concern createUpdatedEntity(EntityManager em) {
         Concern concern = new Concern()
             .title(UPDATED_TITLE)
+            .titleFr(UPDATED_TITLE_FR)
             .gender(UPDATED_GENDER)
             .otherNames(UPDATED_OTHER_NAMES)
+            .otherNamesFr(UPDATED_OTHER_NAMES_FR)
             .description(UPDATED_DESCRIPTION)
+            .descriptionFr(UPDATED_DESCRIPTION_FR)
             .picture(UPDATED_PICTURE)
             .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE);
         return concern;
@@ -129,9 +144,12 @@ class ConcernResourceIT {
         assertThat(concernList).hasSize(databaseSizeBeforeCreate + 1);
         Concern testConcern = concernList.get(concernList.size() - 1);
         assertThat(testConcern.getTitle()).isEqualTo(DEFAULT_TITLE);
+        assertThat(testConcern.getTitleFr()).isEqualTo(DEFAULT_TITLE_FR);
         assertThat(testConcern.getGender()).isEqualTo(DEFAULT_GENDER);
         assertThat(testConcern.getOtherNames()).isEqualTo(DEFAULT_OTHER_NAMES);
+        assertThat(testConcern.getOtherNamesFr()).isEqualTo(DEFAULT_OTHER_NAMES_FR);
         assertThat(testConcern.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
+        assertThat(testConcern.getDescriptionFr()).isEqualTo(DEFAULT_DESCRIPTION_FR);
         assertThat(testConcern.getPicture()).isEqualTo(DEFAULT_PICTURE);
         assertThat(testConcern.getPictureContentType()).isEqualTo(DEFAULT_PICTURE_CONTENT_TYPE);
     }
@@ -173,6 +191,23 @@ class ConcernResourceIT {
 
     @Test
     @Transactional
+    void checkTitleFrIsRequired() throws Exception {
+        int databaseSizeBeforeTest = concernRepository.findAll().size();
+        // set the field null
+        concern.setTitleFr(null);
+
+        // Create the Concern, which fails.
+
+        restConcernMockMvc
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(concern)))
+            .andExpect(status().isBadRequest());
+
+        List<Concern> concernList = concernRepository.findAll();
+        assertThat(concernList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     void checkGenderIsRequired() throws Exception {
         int databaseSizeBeforeTest = concernRepository.findAll().size();
         // set the field null
@@ -201,9 +236,12 @@ class ConcernResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(concern.getId().intValue())))
             .andExpect(jsonPath("$.[*].title").value(hasItem(DEFAULT_TITLE)))
+            .andExpect(jsonPath("$.[*].titleFr").value(hasItem(DEFAULT_TITLE_FR)))
             .andExpect(jsonPath("$.[*].gender").value(hasItem(DEFAULT_GENDER.toString())))
             .andExpect(jsonPath("$.[*].otherNames").value(hasItem(DEFAULT_OTHER_NAMES)))
+            .andExpect(jsonPath("$.[*].otherNamesFr").value(hasItem(DEFAULT_OTHER_NAMES_FR)))
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
+            .andExpect(jsonPath("$.[*].descriptionFr").value(hasItem(DEFAULT_DESCRIPTION_FR.toString())))
             .andExpect(jsonPath("$.[*].pictureContentType").value(hasItem(DEFAULT_PICTURE_CONTENT_TYPE)))
             .andExpect(jsonPath("$.[*].picture").value(hasItem(Base64.getEncoder().encodeToString(DEFAULT_PICTURE))));
     }
@@ -238,9 +276,12 @@ class ConcernResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(concern.getId().intValue()))
             .andExpect(jsonPath("$.title").value(DEFAULT_TITLE))
+            .andExpect(jsonPath("$.titleFr").value(DEFAULT_TITLE_FR))
             .andExpect(jsonPath("$.gender").value(DEFAULT_GENDER.toString()))
             .andExpect(jsonPath("$.otherNames").value(DEFAULT_OTHER_NAMES))
+            .andExpect(jsonPath("$.otherNamesFr").value(DEFAULT_OTHER_NAMES_FR))
             .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()))
+            .andExpect(jsonPath("$.descriptionFr").value(DEFAULT_DESCRIPTION_FR.toString()))
             .andExpect(jsonPath("$.pictureContentType").value(DEFAULT_PICTURE_CONTENT_TYPE))
             .andExpect(jsonPath("$.picture").value(Base64.getEncoder().encodeToString(DEFAULT_PICTURE)));
     }
@@ -266,9 +307,12 @@ class ConcernResourceIT {
         em.detach(updatedConcern);
         updatedConcern
             .title(UPDATED_TITLE)
+            .titleFr(UPDATED_TITLE_FR)
             .gender(UPDATED_GENDER)
             .otherNames(UPDATED_OTHER_NAMES)
+            .otherNamesFr(UPDATED_OTHER_NAMES_FR)
             .description(UPDATED_DESCRIPTION)
+            .descriptionFr(UPDATED_DESCRIPTION_FR)
             .picture(UPDATED_PICTURE)
             .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE);
 
@@ -285,9 +329,12 @@ class ConcernResourceIT {
         assertThat(concernList).hasSize(databaseSizeBeforeUpdate);
         Concern testConcern = concernList.get(concernList.size() - 1);
         assertThat(testConcern.getTitle()).isEqualTo(UPDATED_TITLE);
+        assertThat(testConcern.getTitleFr()).isEqualTo(UPDATED_TITLE_FR);
         assertThat(testConcern.getGender()).isEqualTo(UPDATED_GENDER);
         assertThat(testConcern.getOtherNames()).isEqualTo(UPDATED_OTHER_NAMES);
+        assertThat(testConcern.getOtherNamesFr()).isEqualTo(UPDATED_OTHER_NAMES_FR);
         assertThat(testConcern.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
+        assertThat(testConcern.getDescriptionFr()).isEqualTo(UPDATED_DESCRIPTION_FR);
         assertThat(testConcern.getPicture()).isEqualTo(UPDATED_PICTURE);
         assertThat(testConcern.getPictureContentType()).isEqualTo(UPDATED_PICTURE_CONTENT_TYPE);
     }
@@ -362,7 +409,9 @@ class ConcernResourceIT {
 
         partialUpdatedConcern
             .title(UPDATED_TITLE)
-            .gender(UPDATED_GENDER)
+            .titleFr(UPDATED_TITLE_FR)
+            .otherNamesFr(UPDATED_OTHER_NAMES_FR)
+            .descriptionFr(UPDATED_DESCRIPTION_FR)
             .picture(UPDATED_PICTURE)
             .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE);
 
@@ -379,9 +428,12 @@ class ConcernResourceIT {
         assertThat(concernList).hasSize(databaseSizeBeforeUpdate);
         Concern testConcern = concernList.get(concernList.size() - 1);
         assertThat(testConcern.getTitle()).isEqualTo(UPDATED_TITLE);
-        assertThat(testConcern.getGender()).isEqualTo(UPDATED_GENDER);
+        assertThat(testConcern.getTitleFr()).isEqualTo(UPDATED_TITLE_FR);
+        assertThat(testConcern.getGender()).isEqualTo(DEFAULT_GENDER);
         assertThat(testConcern.getOtherNames()).isEqualTo(DEFAULT_OTHER_NAMES);
+        assertThat(testConcern.getOtherNamesFr()).isEqualTo(UPDATED_OTHER_NAMES_FR);
         assertThat(testConcern.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
+        assertThat(testConcern.getDescriptionFr()).isEqualTo(UPDATED_DESCRIPTION_FR);
         assertThat(testConcern.getPicture()).isEqualTo(UPDATED_PICTURE);
         assertThat(testConcern.getPictureContentType()).isEqualTo(UPDATED_PICTURE_CONTENT_TYPE);
     }
@@ -400,9 +452,12 @@ class ConcernResourceIT {
 
         partialUpdatedConcern
             .title(UPDATED_TITLE)
+            .titleFr(UPDATED_TITLE_FR)
             .gender(UPDATED_GENDER)
             .otherNames(UPDATED_OTHER_NAMES)
+            .otherNamesFr(UPDATED_OTHER_NAMES_FR)
             .description(UPDATED_DESCRIPTION)
+            .descriptionFr(UPDATED_DESCRIPTION_FR)
             .picture(UPDATED_PICTURE)
             .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE);
 
@@ -419,9 +474,12 @@ class ConcernResourceIT {
         assertThat(concernList).hasSize(databaseSizeBeforeUpdate);
         Concern testConcern = concernList.get(concernList.size() - 1);
         assertThat(testConcern.getTitle()).isEqualTo(UPDATED_TITLE);
+        assertThat(testConcern.getTitleFr()).isEqualTo(UPDATED_TITLE_FR);
         assertThat(testConcern.getGender()).isEqualTo(UPDATED_GENDER);
         assertThat(testConcern.getOtherNames()).isEqualTo(UPDATED_OTHER_NAMES);
+        assertThat(testConcern.getOtherNamesFr()).isEqualTo(UPDATED_OTHER_NAMES_FR);
         assertThat(testConcern.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
+        assertThat(testConcern.getDescriptionFr()).isEqualTo(UPDATED_DESCRIPTION_FR);
         assertThat(testConcern.getPicture()).isEqualTo(UPDATED_PICTURE);
         assertThat(testConcern.getPictureContentType()).isEqualTo(UPDATED_PICTURE_CONTENT_TYPE);
     }

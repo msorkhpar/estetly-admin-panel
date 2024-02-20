@@ -133,8 +133,14 @@ public class ProcedureResource {
                 if (procedure.getTitle() != null) {
                     existingProcedure.setTitle(procedure.getTitle());
                 }
+                if (procedure.getTitleFr() != null) {
+                    existingProcedure.setTitleFr(procedure.getTitleFr());
+                }
                 if (procedure.getDescription() != null) {
                     existingProcedure.setDescription(procedure.getDescription());
+                }
+                if (procedure.getDescriptionFr() != null) {
+                    existingProcedure.setDescriptionFr(procedure.getDescriptionFr());
                 }
                 if (procedure.getPicture() != null) {
                     existingProcedure.setPicture(procedure.getPicture());

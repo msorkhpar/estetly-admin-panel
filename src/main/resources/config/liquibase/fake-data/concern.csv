@@ -1,11 +1,11 @@
-id;title;gender;other_names;description;picture;picture_content_type
-1;than pointless;MALE;though;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
-2;ouch playfully;FEMALE;righteously notwithstanding;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
-3;concrete;ALL;gah;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
-4;when;MALE;athwart tap hospitalisation;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
-5;truly weatherise menacing;ALL;mmm zigzag yet;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
-6;haunting evenly drat;ALL;nor consideration;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
-7;joyfully bah joshingly;ALL;ouch frank;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
-8;figure psst junket;FEMALE;or;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
-9;course mast pink;ALL;offensively murky;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
-10;fooey gadzooks;FEMALE;uncle;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
+id;title;title_fr;gender;other_names;other_names_fr;description;description_fr;picture;picture_content_type
+1;than pointless;finally deserted;ALL;playfully worry irritably;to how for;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
+2;troubled actually lovely;ack finally;MALE;object obvious;intuit;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
+3;covariate reckless tantalise;aha;MALE;taper ack the;boo used oh;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
+4;pro;versus;FEMALE;mom detoxify mentor;rudely after;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
+5;gosh;gum hospital;MALE;youthfully between accident;answer yahoo;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
+6;aside after;throughout whose;MALE;woot;mellow;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
+7;ultimate er;outdo after;MALE;lone meanwhile ample;count;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
+8;tepid annually;mockingly huzzah teach;FEMALE;neatly;tomorrow;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
+9;than moment;what;FEMALE;bikini;flute;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png
+10;past when favorite;penicillin ick bend;FEMALE;babble where;dismal extremely;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png

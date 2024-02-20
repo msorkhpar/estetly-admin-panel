@@ -20,6 +20,7 @@
       "id": "ID",
       "code": "Code",
       "displayName": "Display Name",
+      "displayNameFr": "Display Name Fr",
       "parent": "Parent"
     }
   }

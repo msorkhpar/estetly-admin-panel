@@ -60,6 +60,12 @@ export const DoctorProcedureAssociationDetail = () => {
           </dt>
           <dd>{doctorProcedureAssociationEntity.description}</dd>
           <dt>
+            <span id="descriptionFr">
+              <Translate contentKey="estetlyApp.doctorProcedureAssociation.descriptionFr">Description Fr</Translate>
+            </span>
+          </dt>
+          <dd>{doctorProcedureAssociationEntity.descriptionFr}</dd>
+          <dt>
             <span id="cost">
               <Translate contentKey="estetlyApp.doctorProcedureAssociation.cost">Cost</Translate>
             </span>

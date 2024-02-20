@@ -105,6 +105,16 @@ export const CategoryUpdate = () => {
                   required: { value: true, message: translate('entity.validation.required') },
                 }}
               />
+              <ValidatedField
+                label={translate('estetlyApp.category.nameFr')}
+                id="category-nameFr"
+                name="nameFr"
+                data-cy="nameFr"
+                type="text"
+                validate={{
+                  required: { value: true, message: translate('entity.validation.required') },
+                }}
+              />
               <ValidatedField label={translate('estetlyApp.category.model')} id="category-model" name="model" data-cy="model" type="select">
                 {modelsValues.map(models => (
                   <option value={models} key={models}>

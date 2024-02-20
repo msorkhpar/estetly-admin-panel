@@ -30,6 +30,10 @@ public class Concern implements Serializable {
     private String title;
 
     @NotNull
+    @Column(name = "title_fr", nullable = false)
+    private String titleFr;
+
+    @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "gender", nullable = false)
     private Gender gender;
@@ -37,9 +41,16 @@ public class Concern implements Serializable {
     @Column(name = "other_names")
     private String otherNames;
 
+    @Column(name = "other_names_fr")
+    private String otherNamesFr;
+
     @Lob
     @Column(name = "description")
     private String description;
+
+    @Lob
+    @Column(name = "description_fr")
+    private String descriptionFr;
 
     @Lob
     @Column(name = "picture")
@@ -80,6 +91,19 @@ public class Concern implements Serializable {
         this.title = title;
     }
 
+    public String getTitleFr() {
+        return this.titleFr;
+    }
+
+    public Concern titleFr(String titleFr) {
+        this.setTitleFr(titleFr);
+        return this;
+    }
+
+    public void setTitleFr(String titleFr) {
+        this.titleFr = titleFr;
+    }
+
     public Gender getGender() {
         return this.gender;
     }
@@ -106,6 +130,19 @@ public class Concern implements Serializable {
         this.otherNames = otherNames;
     }
 
+    public String getOtherNamesFr() {
+        return this.otherNamesFr;
+    }
+
+    public Concern otherNamesFr(String otherNamesFr) {
+        this.setOtherNamesFr(otherNamesFr);
+        return this;
+    }
+
+    public void setOtherNamesFr(String otherNamesFr) {
+        this.otherNamesFr = otherNamesFr;
+    }
+
     public String getDescription() {
         return this.description;
     }
@@ -117,6 +154,19 @@ public class Concern implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getDescriptionFr() {
+        return this.descriptionFr;
+    }
+
+    public Concern descriptionFr(String descriptionFr) {
+        this.setDescriptionFr(descriptionFr);
+        return this;
+    }
+
+    public void setDescriptionFr(String descriptionFr) {
+        this.descriptionFr = descriptionFr;
     }
 
     public byte[] getPicture() {
@@ -183,9 +233,12 @@ public class Concern implements Serializable {
         return "Concern{" +
             "id=" + getId() +
             ", title='" + getTitle() + "'" +
+            ", titleFr='" + getTitleFr() + "'" +
             ", gender='" + getGender() + "'" +
             ", otherNames='" + getOtherNames() + "'" +
+            ", otherNamesFr='" + getOtherNamesFr() + "'" +
             ", description='" + getDescription() + "'" +
+            ", descriptionFr='" + getDescriptionFr() + "'" +
             ", picture='" + getPicture() + "'" +
             ", pictureContentType='" + getPictureContentType() + "'" +
             "}";

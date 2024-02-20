@@ -10,14 +10,18 @@ public class BodyAreaTestSamples {
     private static final AtomicLong longCount = new AtomicLong(random.nextInt() + (2 * Integer.MAX_VALUE));
 
     public static BodyArea getBodyAreaSample1() {
-        return new BodyArea().id(1L).code("code1").displayName("displayName1");
+        return new BodyArea().id(1L).code("code1").displayName("displayName1").displayNameFr("displayNameFr1");
     }
 
     public static BodyArea getBodyAreaSample2() {
-        return new BodyArea().id(2L).code("code2").displayName("displayName2");
+        return new BodyArea().id(2L).code("code2").displayName("displayName2").displayNameFr("displayNameFr2");
     }
 
     public static BodyArea getBodyAreaRandomSampleGenerator() {
-        return new BodyArea().id(longCount.incrementAndGet()).code(UUID.randomUUID().toString()).displayName(UUID.randomUUID().toString());
+        return new BodyArea()
+            .id(longCount.incrementAndGet())
+            .code(UUID.randomUUID().toString())
+            .displayName(UUID.randomUUID().toString())
+            .displayNameFr(UUID.randomUUID().toString());
     }
 }

@@ -23,6 +23,9 @@
             <column name="description" type="${clobType}">
                 <constraints nullable="true" />
             </column>
+            <column name="description_fr" type="${clobType}">
+                <constraints nullable="true" />
+            </column>
             <column name="cost" type="${floatType}">
                 <constraints nullable="true" />
             </column>
@@ -56,6 +59,7 @@
             <column name="picture" type="blob"/>
             <column name="picture_content_type" type="string"/>
             <column name="description" type="clob"/>
+            <column name="description_fr" type="clob"/>
             <column name="cost" type="numeric"/>
             <column name="procedure_id" type="numeric"/>
             <column name="doctor_id" type="numeric"/>

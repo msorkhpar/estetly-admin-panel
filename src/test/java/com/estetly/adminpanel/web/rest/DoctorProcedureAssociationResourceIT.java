@@ -48,6 +48,9 @@ class DoctorProcedureAssociationResourceIT {
     private static final String DEFAULT_DESCRIPTION = "AAAAAAAAAA";
     private static final String UPDATED_DESCRIPTION = "BBBBBBBBBB";
 
+    private static final String DEFAULT_DESCRIPTION_FR = "AAAAAAAAAA";
+    private static final String UPDATED_DESCRIPTION_FR = "BBBBBBBBBB";
+
     private static final Float DEFAULT_COST = 1F;
     private static final Float UPDATED_COST = 2F;
 
@@ -82,6 +85,7 @@ class DoctorProcedureAssociationResourceIT {
             .picture(DEFAULT_PICTURE)
             .pictureContentType(DEFAULT_PICTURE_CONTENT_TYPE)
             .description(DEFAULT_DESCRIPTION)
+            .descriptionFr(DEFAULT_DESCRIPTION_FR)
             .cost(DEFAULT_COST);
         // Add required entity
         Procedure procedure;
@@ -117,6 +121,7 @@ class DoctorProcedureAssociationResourceIT {
             .picture(UPDATED_PICTURE)
             .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE)
             .description(UPDATED_DESCRIPTION)
+            .descriptionFr(UPDATED_DESCRIPTION_FR)
             .cost(UPDATED_COST);
         // Add required entity
         Procedure procedure;
@@ -168,6 +173,7 @@ class DoctorProcedureAssociationResourceIT {
         assertThat(testDoctorProcedureAssociation.getPicture()).isEqualTo(DEFAULT_PICTURE);
         assertThat(testDoctorProcedureAssociation.getPictureContentType()).isEqualTo(DEFAULT_PICTURE_CONTENT_TYPE);
         assertThat(testDoctorProcedureAssociation.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
+        assertThat(testDoctorProcedureAssociation.getDescriptionFr()).isEqualTo(DEFAULT_DESCRIPTION_FR);
         assertThat(testDoctorProcedureAssociation.getCost()).isEqualTo(DEFAULT_COST);
     }
 
@@ -208,6 +214,7 @@ class DoctorProcedureAssociationResourceIT {
             .andExpect(jsonPath("$.[*].pictureContentType").value(hasItem(DEFAULT_PICTURE_CONTENT_TYPE)))
             .andExpect(jsonPath("$.[*].picture").value(hasItem(Base64.getEncoder().encodeToString(DEFAULT_PICTURE))))
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
+            .andExpect(jsonPath("$.[*].descriptionFr").value(hasItem(DEFAULT_DESCRIPTION_FR.toString())))
             .andExpect(jsonPath("$.[*].cost").value(hasItem(DEFAULT_COST.doubleValue())));
     }
 
@@ -243,6 +250,7 @@ class DoctorProcedureAssociationResourceIT {
             .andExpect(jsonPath("$.pictureContentType").value(DEFAULT_PICTURE_CONTENT_TYPE))
             .andExpect(jsonPath("$.picture").value(Base64.getEncoder().encodeToString(DEFAULT_PICTURE)))
             .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()))
+            .andExpect(jsonPath("$.descriptionFr").value(DEFAULT_DESCRIPTION_FR.toString()))
             .andExpect(jsonPath("$.cost").value(DEFAULT_COST.doubleValue()));
     }
 
@@ -271,6 +279,7 @@ class DoctorProcedureAssociationResourceIT {
             .picture(UPDATED_PICTURE)
             .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE)
             .description(UPDATED_DESCRIPTION)
+            .descriptionFr(UPDATED_DESCRIPTION_FR)
             .cost(UPDATED_COST);
 
         restDoctorProcedureAssociationMockMvc
@@ -290,6 +299,7 @@ class DoctorProcedureAssociationResourceIT {
         assertThat(testDoctorProcedureAssociation.getPicture()).isEqualTo(UPDATED_PICTURE);
         assertThat(testDoctorProcedureAssociation.getPictureContentType()).isEqualTo(UPDATED_PICTURE_CONTENT_TYPE);
         assertThat(testDoctorProcedureAssociation.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
+        assertThat(testDoctorProcedureAssociation.getDescriptionFr()).isEqualTo(UPDATED_DESCRIPTION_FR);
         assertThat(testDoctorProcedureAssociation.getCost()).isEqualTo(UPDATED_COST);
     }
 
@@ -365,7 +375,7 @@ class DoctorProcedureAssociationResourceIT {
         DoctorProcedureAssociation partialUpdatedDoctorProcedureAssociation = new DoctorProcedureAssociation();
         partialUpdatedDoctorProcedureAssociation.setId(doctorProcedureAssociation.getId());
 
-        partialUpdatedDoctorProcedureAssociation.description(UPDATED_DESCRIPTION);
+        partialUpdatedDoctorProcedureAssociation.description(UPDATED_DESCRIPTION).cost(UPDATED_COST);
 
         restDoctorProcedureAssociationMockMvc
             .perform(
@@ -384,7 +394,8 @@ class DoctorProcedureAssociationResourceIT {
         assertThat(testDoctorProcedureAssociation.getPicture()).isEqualTo(DEFAULT_PICTURE);
         assertThat(testDoctorProcedureAssociation.getPictureContentType()).isEqualTo(DEFAULT_PICTURE_CONTENT_TYPE);
         assertThat(testDoctorProcedureAssociation.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
-        assertThat(testDoctorProcedureAssociation.getCost()).isEqualTo(DEFAULT_COST);
+        assertThat(testDoctorProcedureAssociation.getDescriptionFr()).isEqualTo(DEFAULT_DESCRIPTION_FR);
+        assertThat(testDoctorProcedureAssociation.getCost()).isEqualTo(UPDATED_COST);
     }
 
     @Test
@@ -403,6 +414,7 @@ class DoctorProcedureAssociationResourceIT {
             .picture(UPDATED_PICTURE)
             .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE)
             .description(UPDATED_DESCRIPTION)
+            .descriptionFr(UPDATED_DESCRIPTION_FR)
             .cost(UPDATED_COST);
 
         restDoctorProcedureAssociationMockMvc
@@ -422,6 +434,7 @@ class DoctorProcedureAssociationResourceIT {
         assertThat(testDoctorProcedureAssociation.getPicture()).isEqualTo(UPDATED_PICTURE);
         assertThat(testDoctorProcedureAssociation.getPictureContentType()).isEqualTo(UPDATED_PICTURE_CONTENT_TYPE);
         assertThat(testDoctorProcedureAssociation.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
+        assertThat(testDoctorProcedureAssociation.getDescriptionFr()).isEqualTo(UPDATED_DESCRIPTION_FR);
         assertThat(testDoctorProcedureAssociation.getCost()).isEqualTo(UPDATED_COST);
     }
 

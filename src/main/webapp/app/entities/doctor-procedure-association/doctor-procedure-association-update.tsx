@@ -126,6 +126,13 @@ export const DoctorProcedureAssociationUpdate = () => {
                 type="textarea"
               />
               <ValidatedField
+                label={translate('estetlyApp.doctorProcedureAssociation.descriptionFr')}
+                id="doctor-procedure-association-descriptionFr"
+                name="descriptionFr"
+                data-cy="descriptionFr"
+                type="textarea"
+              />
+              <ValidatedField
                 label={translate('estetlyApp.doctorProcedureAssociation.cost')}
                 id="doctor-procedure-association-cost"
                 name="cost"

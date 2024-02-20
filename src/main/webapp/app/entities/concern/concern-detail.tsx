@@ -38,6 +38,12 @@ export const ConcernDetail = () => {
           </dt>
           <dd>{concernEntity.title}</dd>
           <dt>
+            <span id="titleFr">
+              <Translate contentKey="estetlyApp.concern.titleFr">Title Fr</Translate>
+            </span>
+          </dt>
+          <dd>{concernEntity.titleFr}</dd>
+          <dt>
             <span id="gender">
               <Translate contentKey="estetlyApp.concern.gender">Gender</Translate>
             </span>
@@ -50,11 +56,23 @@ export const ConcernDetail = () => {
           </dt>
           <dd>{concernEntity.otherNames}</dd>
           <dt>
+            <span id="otherNamesFr">
+              <Translate contentKey="estetlyApp.concern.otherNamesFr">Other Names Fr</Translate>
+            </span>
+          </dt>
+          <dd>{concernEntity.otherNamesFr}</dd>
+          <dt>
             <span id="description">
               <Translate contentKey="estetlyApp.concern.description">Description</Translate>
             </span>
           </dt>
           <dd>{concernEntity.description}</dd>
+          <dt>
+            <span id="descriptionFr">
+              <Translate contentKey="estetlyApp.concern.descriptionFr">Description Fr</Translate>
+            </span>
+          </dt>
+          <dd>{concernEntity.descriptionFr}</dd>
           <dt>
             <span id="picture">
               <Translate contentKey="estetlyApp.concern.picture">Picture</Translate>

@@ -33,8 +33,14 @@ class ProcedureResourceIT {
     private static final String DEFAULT_TITLE = "AAAAAAAAAA";
     private static final String UPDATED_TITLE = "BBBBBBBBBB";
 
+    private static final String DEFAULT_TITLE_FR = "AAAAAAAAAA";
+    private static final String UPDATED_TITLE_FR = "BBBBBBBBBB";
+
     private static final String DEFAULT_DESCRIPTION = "AAAAAAAAAA";
     private static final String UPDATED_DESCRIPTION = "BBBBBBBBBB";
+
+    private static final String DEFAULT_DESCRIPTION_FR = "AAAAAAAAAA";
+    private static final String UPDATED_DESCRIPTION_FR = "BBBBBBBBBB";
 
     private static final byte[] DEFAULT_PICTURE = TestUtil.createByteArray(1, "0");
     private static final byte[] UPDATED_PICTURE = TestUtil.createByteArray(1, "1");
@@ -73,7 +79,9 @@ class ProcedureResourceIT {
     public static Procedure createEntity(EntityManager em) {
         Procedure procedure = new Procedure()
             .title(DEFAULT_TITLE)
+            .titleFr(DEFAULT_TITLE_FR)
             .description(DEFAULT_DESCRIPTION)
+            .descriptionFr(DEFAULT_DESCRIPTION_FR)
             .picture(DEFAULT_PICTURE)
             .pictureContentType(DEFAULT_PICTURE_CONTENT_TYPE)
             .invasiveness(DEFAULT_INVASIVENESS)
@@ -90,7 +98,9 @@ class ProcedureResourceIT {
     public static Procedure createUpdatedEntity(EntityManager em) {
         Procedure procedure = new Procedure()
             .title(UPDATED_TITLE)
+            .titleFr(UPDATED_TITLE_FR)
             .description(UPDATED_DESCRIPTION)
+            .descriptionFr(UPDATED_DESCRIPTION_FR)
             .picture(UPDATED_PICTURE)
             .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE)
             .invasiveness(UPDATED_INVASIVENESS)
@@ -117,7 +127,9 @@ class ProcedureResourceIT {
         assertThat(procedureList).hasSize(databaseSizeBeforeCreate + 1);
         Procedure testProcedure = procedureList.get(procedureList.size() - 1);
         assertThat(testProcedure.getTitle()).isEqualTo(DEFAULT_TITLE);
+        assertThat(testProcedure.getTitleFr()).isEqualTo(DEFAULT_TITLE_FR);
         assertThat(testProcedure.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
+        assertThat(testProcedure.getDescriptionFr()).isEqualTo(DEFAULT_DESCRIPTION_FR);
         assertThat(testProcedure.getPicture()).isEqualTo(DEFAULT_PICTURE);
         assertThat(testProcedure.getPictureContentType()).isEqualTo(DEFAULT_PICTURE_CONTENT_TYPE);
         assertThat(testProcedure.getInvasiveness()).isEqualTo(DEFAULT_INVASIVENESS);
@@ -161,6 +173,23 @@ class ProcedureResourceIT {
 
     @Test
     @Transactional
+    void checkTitleFrIsRequired() throws Exception {
+        int databaseSizeBeforeTest = procedureRepository.findAll().size();
+        // set the field null
+        procedure.setTitleFr(null);
+
+        // Create the Procedure, which fails.
+
+        restProcedureMockMvc
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(procedure)))
+            .andExpect(status().isBadRequest());
+
+        List<Procedure> procedureList = procedureRepository.findAll();
+        assertThat(procedureList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     void getAllProcedures() throws Exception {
         // Initialize the database
         procedureRepository.saveAndFlush(procedure);
@@ -172,7 +201,9 @@ class ProcedureResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(procedure.getId().intValue())))
             .andExpect(jsonPath("$.[*].title").value(hasItem(DEFAULT_TITLE)))
+            .andExpect(jsonPath("$.[*].titleFr").value(hasItem(DEFAULT_TITLE_FR)))
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
+            .andExpect(jsonPath("$.[*].descriptionFr").value(hasItem(DEFAULT_DESCRIPTION_FR.toString())))
             .andExpect(jsonPath("$.[*].pictureContentType").value(hasItem(DEFAULT_PICTURE_CONTENT_TYPE)))
             .andExpect(jsonPath("$.[*].picture").value(hasItem(Base64.getEncoder().encodeToString(DEFAULT_PICTURE))))
             .andExpect(jsonPath("$.[*].invasiveness").value(hasItem(DEFAULT_INVASIVENESS)))
@@ -192,7 +223,9 @@ class ProcedureResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(procedure.getId().intValue()))
             .andExpect(jsonPath("$.title").value(DEFAULT_TITLE))
+            .andExpect(jsonPath("$.titleFr").value(DEFAULT_TITLE_FR))
             .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()))
+            .andExpect(jsonPath("$.descriptionFr").value(DEFAULT_DESCRIPTION_FR.toString()))
             .andExpect(jsonPath("$.pictureContentType").value(DEFAULT_PICTURE_CONTENT_TYPE))
             .andExpect(jsonPath("$.picture").value(Base64.getEncoder().encodeToString(DEFAULT_PICTURE)))
             .andExpect(jsonPath("$.invasiveness").value(DEFAULT_INVASIVENESS))
@@ -220,7 +253,9 @@ class ProcedureResourceIT {
         em.detach(updatedProcedure);
         updatedProcedure
             .title(UPDATED_TITLE)
+            .titleFr(UPDATED_TITLE_FR)
             .description(UPDATED_DESCRIPTION)
+            .descriptionFr(UPDATED_DESCRIPTION_FR)
             .picture(UPDATED_PICTURE)
             .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE)
             .invasiveness(UPDATED_INVASIVENESS)
@@ -239,7 +274,9 @@ class ProcedureResourceIT {
         assertThat(procedureList).hasSize(databaseSizeBeforeUpdate);
         Procedure testProcedure = procedureList.get(procedureList.size() - 1);
         assertThat(testProcedure.getTitle()).isEqualTo(UPDATED_TITLE);
+        assertThat(testProcedure.getTitleFr()).isEqualTo(UPDATED_TITLE_FR);
         assertThat(testProcedure.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
+        assertThat(testProcedure.getDescriptionFr()).isEqualTo(UPDATED_DESCRIPTION_FR);
         assertThat(testProcedure.getPicture()).isEqualTo(UPDATED_PICTURE);
         assertThat(testProcedure.getPictureContentType()).isEqualTo(UPDATED_PICTURE_CONTENT_TYPE);
         assertThat(testProcedure.getInvasiveness()).isEqualTo(UPDATED_INVASIVENESS);
@@ -315,11 +352,11 @@ class ProcedureResourceIT {
         partialUpdatedProcedure.setId(procedure.getId());
 
         partialUpdatedProcedure
+            .titleFr(UPDATED_TITLE_FR)
             .description(UPDATED_DESCRIPTION)
+            .descriptionFr(UPDATED_DESCRIPTION_FR)
             .picture(UPDATED_PICTURE)
-            .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE)
-            .invasiveness(UPDATED_INVASIVENESS)
-            .averageCost(UPDATED_AVERAGE_COST);
+            .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE);
 
         restProcedureMockMvc
             .perform(
@@ -334,11 +371,13 @@ class ProcedureResourceIT {
         assertThat(procedureList).hasSize(databaseSizeBeforeUpdate);
         Procedure testProcedure = procedureList.get(procedureList.size() - 1);
         assertThat(testProcedure.getTitle()).isEqualTo(DEFAULT_TITLE);
+        assertThat(testProcedure.getTitleFr()).isEqualTo(UPDATED_TITLE_FR);
         assertThat(testProcedure.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
+        assertThat(testProcedure.getDescriptionFr()).isEqualTo(UPDATED_DESCRIPTION_FR);
         assertThat(testProcedure.getPicture()).isEqualTo(UPDATED_PICTURE);
         assertThat(testProcedure.getPictureContentType()).isEqualTo(UPDATED_PICTURE_CONTENT_TYPE);
-        assertThat(testProcedure.getInvasiveness()).isEqualTo(UPDATED_INVASIVENESS);
-        assertThat(testProcedure.getAverageCost()).isEqualTo(UPDATED_AVERAGE_COST);
+        assertThat(testProcedure.getInvasiveness()).isEqualTo(DEFAULT_INVASIVENESS);
+        assertThat(testProcedure.getAverageCost()).isEqualTo(DEFAULT_AVERAGE_COST);
     }
 
     @Test
@@ -355,7 +394,9 @@ class ProcedureResourceIT {
 
         partialUpdatedProcedure
             .title(UPDATED_TITLE)
+            .titleFr(UPDATED_TITLE_FR)
             .description(UPDATED_DESCRIPTION)
+            .descriptionFr(UPDATED_DESCRIPTION_FR)
             .picture(UPDATED_PICTURE)
             .pictureContentType(UPDATED_PICTURE_CONTENT_TYPE)
             .invasiveness(UPDATED_INVASIVENESS)
@@ -374,7 +415,9 @@ class ProcedureResourceIT {
         assertThat(procedureList).hasSize(databaseSizeBeforeUpdate);
         Procedure testProcedure = procedureList.get(procedureList.size() - 1);
         assertThat(testProcedure.getTitle()).isEqualTo(UPDATED_TITLE);
+        assertThat(testProcedure.getTitleFr()).isEqualTo(UPDATED_TITLE_FR);
         assertThat(testProcedure.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
+        assertThat(testProcedure.getDescriptionFr()).isEqualTo(UPDATED_DESCRIPTION_FR);
         assertThat(testProcedure.getPicture()).isEqualTo(UPDATED_PICTURE);
         assertThat(testProcedure.getPictureContentType()).isEqualTo(UPDATED_PICTURE_CONTENT_TYPE);
         assertThat(testProcedure.getInvasiveness()).isEqualTo(UPDATED_INVASIVENESS);

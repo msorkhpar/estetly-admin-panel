@@ -110,10 +110,28 @@ export const ProcedureUpdate = () => {
                 }}
               />
               <ValidatedField
+                label={translate('estetlyApp.procedure.titleFr')}
+                id="procedure-titleFr"
+                name="titleFr"
+                data-cy="titleFr"
+                type="text"
+                validate={{
+                  required: { value: true, message: translate('entity.validation.required') },
+                  maxLength: { value: 254, message: translate('entity.validation.maxlength', { max: 254 }) },
+                }}
+              />
+              <ValidatedField
                 label={translate('estetlyApp.procedure.description')}
                 id="procedure-description"
                 name="description"
                 data-cy="description"
+                type="textarea"
+              />
+              <ValidatedField
+                label={translate('estetlyApp.procedure.descriptionFr')}
+                id="procedure-descriptionFr"
+                name="descriptionFr"
+                data-cy="descriptionFr"
                 type="textarea"
               />
               <ValidatedBlobField

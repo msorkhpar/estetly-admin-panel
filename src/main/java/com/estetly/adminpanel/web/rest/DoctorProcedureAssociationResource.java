@@ -141,6 +141,9 @@ public class DoctorProcedureAssociationResource {
                 if (doctorProcedureAssociation.getDescription() != null) {
                     existingDoctorProcedureAssociation.setDescription(doctorProcedureAssociation.getDescription());
                 }
+                if (doctorProcedureAssociation.getDescriptionFr() != null) {
+                    existingDoctorProcedureAssociation.setDescriptionFr(doctorProcedureAssociation.getDescriptionFr());
+                }
                 if (doctorProcedureAssociation.getCost() != null) {
                     existingDoctorProcedureAssociation.setCost(doctorProcedureAssociation.getCost());
                 }

@@ -128,6 +128,9 @@ public class CategoryResource {
                 if (category.getName() != null) {
                     existingCategory.setName(category.getName());
                 }
+                if (category.getNameFr() != null) {
+                    existingCategory.setNameFr(category.getNameFr());
+                }
                 if (category.getModel() != null) {
                     existingCategory.setModel(category.getModel());
                 }

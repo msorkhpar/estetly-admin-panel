@@ -35,6 +35,10 @@ public class DoctorProcedureAssociation implements Serializable {
     @Column(name = "description")
     private String description;
 
+    @Lob
+    @Column(name = "description_fr")
+    private String descriptionFr;
+
     @Column(name = "cost")
     private Float cost;
 
@@ -99,6 +103,19 @@ public class DoctorProcedureAssociation implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getDescriptionFr() {
+        return this.descriptionFr;
+    }
+
+    public DoctorProcedureAssociation descriptionFr(String descriptionFr) {
+        this.setDescriptionFr(descriptionFr);
+        return this;
+    }
+
+    public void setDescriptionFr(String descriptionFr) {
+        this.descriptionFr = descriptionFr;
     }
 
     public Float getCost() {
@@ -167,6 +184,7 @@ public class DoctorProcedureAssociation implements Serializable {
             ", picture='" + getPicture() + "'" +
             ", pictureContentType='" + getPictureContentType() + "'" +
             ", description='" + getDescription() + "'" +
+            ", descriptionFr='" + getDescriptionFr() + "'" +
             ", cost=" + getCost() +
             "}";
     }

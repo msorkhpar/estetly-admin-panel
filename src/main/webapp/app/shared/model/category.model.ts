@@ -4,6 +4,7 @@ import { Models } from 'app/shared/model/enumerations/models.model';
 export interface ICategory {
   id?: number;
   name?: string;
+  nameFr?: string;
   model?: keyof typeof Models;
   concerns?: IConcern[] | null;
 }

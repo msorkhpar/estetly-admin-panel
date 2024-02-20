@@ -17,13 +17,22 @@
             <column name="title" type="varchar(255)">
                 <constraints nullable="false" />
             </column>
+            <column name="title_fr" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
             <column name="gender" type="varchar(255)">
                 <constraints nullable="false" />
             </column>
             <column name="other_names" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
+            <column name="other_names_fr" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
             <column name="description" type="${clobType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="description_fr" type="${clobType}">
                 <constraints nullable="true" />
             </column>
             <column name="picture" type="${blobType}">
@@ -57,9 +66,12 @@
                   usePreparedStatements="true">
             <column name="id" type="numeric"/>
             <column name="title" type="string"/>
+            <column name="title_fr" type="string"/>
             <column name="gender" type="string"/>
             <column name="other_names" type="string"/>
+            <column name="other_names_fr" type="string"/>
             <column name="description" type="clob"/>
+            <column name="description_fr" type="clob"/>
             <column name="picture" type="blob"/>
             <column name="picture_content_type" type="string"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->

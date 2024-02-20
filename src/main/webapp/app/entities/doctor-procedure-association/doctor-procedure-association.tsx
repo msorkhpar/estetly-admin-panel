@@ -129,6 +129,10 @@ export const DoctorProcedureAssociation = () => {
                   <Translate contentKey="estetlyApp.doctorProcedureAssociation.description">Description</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('description')} />
                 </th>
+                <th className="hand" onClick={sort('descriptionFr')}>
+                  <Translate contentKey="estetlyApp.doctorProcedureAssociation.descriptionFr">Description Fr</Translate>{' '}
+                  <FontAwesomeIcon icon={getSortIconByFieldName('descriptionFr')} />
+                </th>
                 <th className="hand" onClick={sort('cost')}>
                   <Translate contentKey="estetlyApp.doctorProcedureAssociation.cost">Cost</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('cost')} />
@@ -170,6 +174,7 @@ export const DoctorProcedureAssociation = () => {
                     ) : null}
                   </td>
                   <td>{doctorProcedureAssociation.description}</td>
+                  <td>{doctorProcedureAssociation.descriptionFr}</td>
                   <td>{doctorProcedureAssociation.cost}</td>
                   <td>
                     {doctorProcedureAssociation.procedure ? (

@@ -44,6 +44,12 @@ export const BodyAreaDetail = () => {
           </dt>
           <dd>{bodyAreaEntity.displayName}</dd>
           <dt>
+            <span id="displayNameFr">
+              <Translate contentKey="estetlyApp.bodyArea.displayNameFr">Display Name Fr</Translate>
+            </span>
+          </dt>
+          <dd>{bodyAreaEntity.displayNameFr}</dd>
+          <dt>
             <Translate contentKey="estetlyApp.bodyArea.parent">Parent</Translate>
           </dt>
           <dd>{bodyAreaEntity.parent ? bodyAreaEntity.parent.displayName : ''}</dd>

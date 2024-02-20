@@ -43,6 +43,9 @@ class BodyAreaResourceIT {
     private static final String DEFAULT_DISPLAY_NAME = "AAAAAAAAAA";
     private static final String UPDATED_DISPLAY_NAME = "BBBBBBBBBB";
 
+    private static final String DEFAULT_DISPLAY_NAME_FR = "AAAAAAAAAA";
+    private static final String UPDATED_DISPLAY_NAME_FR = "BBBBBBBBBB";
+
     private static final String ENTITY_API_URL = "/api/body-areas";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
 
@@ -70,7 +73,7 @@ class BodyAreaResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static BodyArea createEntity(EntityManager em) {
-        BodyArea bodyArea = new BodyArea().code(DEFAULT_CODE).displayName(DEFAULT_DISPLAY_NAME);
+        BodyArea bodyArea = new BodyArea().code(DEFAULT_CODE).displayName(DEFAULT_DISPLAY_NAME).displayNameFr(DEFAULT_DISPLAY_NAME_FR);
         return bodyArea;
     }
 
@@ -81,7 +84,7 @@ class BodyAreaResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static BodyArea createUpdatedEntity(EntityManager em) {
-        BodyArea bodyArea = new BodyArea().code(UPDATED_CODE).displayName(UPDATED_DISPLAY_NAME);
+        BodyArea bodyArea = new BodyArea().code(UPDATED_CODE).displayName(UPDATED_DISPLAY_NAME).displayNameFr(UPDATED_DISPLAY_NAME_FR);
         return bodyArea;
     }
 
@@ -105,6 +108,7 @@ class BodyAreaResourceIT {
         BodyArea testBodyArea = bodyAreaList.get(bodyAreaList.size() - 1);
         assertThat(testBodyArea.getCode()).isEqualTo(DEFAULT_CODE);
         assertThat(testBodyArea.getDisplayName()).isEqualTo(DEFAULT_DISPLAY_NAME);
+        assertThat(testBodyArea.getDisplayNameFr()).isEqualTo(DEFAULT_DISPLAY_NAME_FR);
     }
 
     @Test
@@ -144,6 +148,23 @@ class BodyAreaResourceIT {
 
     @Test
     @Transactional
+    void checkDisplayNameFrIsRequired() throws Exception {
+        int databaseSizeBeforeTest = bodyAreaRepository.findAll().size();
+        // set the field null
+        bodyArea.setDisplayNameFr(null);
+
+        // Create the BodyArea, which fails.
+
+        restBodyAreaMockMvc
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(bodyArea)))
+            .andExpect(status().isBadRequest());
+
+        List<BodyArea> bodyAreaList = bodyAreaRepository.findAll();
+        assertThat(bodyAreaList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     void getAllBodyAreas() throws Exception {
         // Initialize the database
         bodyAreaRepository.saveAndFlush(bodyArea);
@@ -155,7 +176,8 @@ class BodyAreaResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(bodyArea.getId().intValue())))
             .andExpect(jsonPath("$.[*].code").value(hasItem(DEFAULT_CODE)))
-            .andExpect(jsonPath("$.[*].displayName").value(hasItem(DEFAULT_DISPLAY_NAME)));
+            .andExpect(jsonPath("$.[*].displayName").value(hasItem(DEFAULT_DISPLAY_NAME)))
+            .andExpect(jsonPath("$.[*].displayNameFr").value(hasItem(DEFAULT_DISPLAY_NAME_FR)));
     }
 
     @SuppressWarnings({ "unchecked" })
@@ -188,7 +210,8 @@ class BodyAreaResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(bodyArea.getId().intValue()))
             .andExpect(jsonPath("$.code").value(DEFAULT_CODE))
-            .andExpect(jsonPath("$.displayName").value(DEFAULT_DISPLAY_NAME));
+            .andExpect(jsonPath("$.displayName").value(DEFAULT_DISPLAY_NAME))
+            .andExpect(jsonPath("$.displayNameFr").value(DEFAULT_DISPLAY_NAME_FR));
     }
 
     @Test
@@ -210,7 +233,7 @@ class BodyAreaResourceIT {
         BodyArea updatedBodyArea = bodyAreaRepository.findById(bodyArea.getId()).orElseThrow();
         // Disconnect from session so that the updates on updatedBodyArea are not directly saved in db
         em.detach(updatedBodyArea);
-        updatedBodyArea.code(UPDATED_CODE).displayName(UPDATED_DISPLAY_NAME);
+        updatedBodyArea.code(UPDATED_CODE).displayName(UPDATED_DISPLAY_NAME).displayNameFr(UPDATED_DISPLAY_NAME_FR);
 
         restBodyAreaMockMvc
             .perform(
@@ -226,6 +249,7 @@ class BodyAreaResourceIT {
         BodyArea testBodyArea = bodyAreaList.get(bodyAreaList.size() - 1);
         assertThat(testBodyArea.getCode()).isEqualTo(UPDATED_CODE);
         assertThat(testBodyArea.getDisplayName()).isEqualTo(UPDATED_DISPLAY_NAME);
+        assertThat(testBodyArea.getDisplayNameFr()).isEqualTo(UPDATED_DISPLAY_NAME_FR);
     }
 
     @Test
@@ -296,7 +320,7 @@ class BodyAreaResourceIT {
         BodyArea partialUpdatedBodyArea = new BodyArea();
         partialUpdatedBodyArea.setId(bodyArea.getId());
 
-        partialUpdatedBodyArea.displayName(UPDATED_DISPLAY_NAME);
+        partialUpdatedBodyArea.displayName(UPDATED_DISPLAY_NAME).displayNameFr(UPDATED_DISPLAY_NAME_FR);
 
         restBodyAreaMockMvc
             .perform(
@@ -312,6 +336,7 @@ class BodyAreaResourceIT {
         BodyArea testBodyArea = bodyAreaList.get(bodyAreaList.size() - 1);
         assertThat(testBodyArea.getCode()).isEqualTo(DEFAULT_CODE);
         assertThat(testBodyArea.getDisplayName()).isEqualTo(UPDATED_DISPLAY_NAME);
+        assertThat(testBodyArea.getDisplayNameFr()).isEqualTo(UPDATED_DISPLAY_NAME_FR);
     }
 
     @Test
@@ -326,7 +351,7 @@ class BodyAreaResourceIT {
         BodyArea partialUpdatedBodyArea = new BodyArea();
         partialUpdatedBodyArea.setId(bodyArea.getId());
 
-        partialUpdatedBodyArea.code(UPDATED_CODE).displayName(UPDATED_DISPLAY_NAME);
+        partialUpdatedBodyArea.code(UPDATED_CODE).displayName(UPDATED_DISPLAY_NAME).displayNameFr(UPDATED_DISPLAY_NAME_FR);
 
         restBodyAreaMockMvc
             .perform(
@@ -342,6 +367,7 @@ class BodyAreaResourceIT {
         BodyArea testBodyArea = bodyAreaList.get(bodyAreaList.size() - 1);
         assertThat(testBodyArea.getCode()).isEqualTo(UPDATED_CODE);
         assertThat(testBodyArea.getDisplayName()).isEqualTo(UPDATED_DISPLAY_NAME);
+        assertThat(testBodyArea.getDisplayNameFr()).isEqualTo(UPDATED_DISPLAY_NAME_FR);
     }
 
     @Test

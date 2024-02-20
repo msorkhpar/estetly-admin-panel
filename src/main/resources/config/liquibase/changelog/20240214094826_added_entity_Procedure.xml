@@ -17,7 +17,13 @@
             <column name="title" type="varchar(254)">
                 <constraints nullable="false" />
             </column>
+            <column name="title_fr" type="varchar(254)">
+                <constraints nullable="false" />
+            </column>
             <column name="description" type="${clobType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="description_fr" type="${clobType}">
                 <constraints nullable="true" />
             </column>
             <column name="picture" type="${blobType}">
@@ -54,7 +60,9 @@
                   usePreparedStatements="true">
             <column name="id" type="numeric"/>
             <column name="title" type="string"/>
+            <column name="title_fr" type="string"/>
             <column name="description" type="clob"/>
+            <column name="description_fr" type="clob"/>
             <column name="picture" type="blob"/>
             <column name="picture_content_type" type="string"/>
             <column name="invasiveness" type="numeric"/>

@@ -19,9 +19,12 @@
       },
       "id": "ID",
       "title": "Title",
+      "titleFr": "Title Fr",
       "gender": "Gender",
       "otherNames": "Other Names",
+      "otherNamesFr": "Other Names Fr",
       "description": "Description",
+      "descriptionFr": "Description Fr",
       "picture": "Picture",
       "category": "Category"
     }

@@ -40,12 +40,14 @@ enum Gender {
 
 entity Category {
     name String required
+    nameFr String required
     model Models required
 }
 
 entity BodyArea {
     code String
     displayName String required
+    displayNameFr String required
 }
 
 
@@ -62,7 +64,9 @@ entity Review {
 
 entity Procedure {
     title String required maxlength(DEFAULT_MAX_LENGTH)
+    titleFr String required maxlength(DEFAULT_MAX_LENGTH)
     description TextBlob
+    descriptionFr TextBlob
     picture ImageBlob
     invasiveness Integer min(0) max(100)
     averageCost Double
@@ -70,9 +74,12 @@ entity Procedure {
 
 entity Concern {
     title String required
+    titleFr String required
     gender Gender required
     otherNames String
+    otherNamesFr String
     description TextBlob
+    descriptionFr TextBlob
     picture ImageBlob
 }
 
@@ -85,6 +92,7 @@ entity ConcernProcedureAssociation {
 entity DoctorProcedureAssociation {
     picture ImageBlob
     description TextBlob
+    descriptionFr TextBlob
     cost Float
 }
 

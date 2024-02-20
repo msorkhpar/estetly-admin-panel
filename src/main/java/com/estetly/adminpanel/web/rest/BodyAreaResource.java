@@ -131,6 +131,9 @@ public class BodyAreaResource {
                 if (bodyArea.getDisplayName() != null) {
                     existingBodyArea.setDisplayName(bodyArea.getDisplayName());
                 }
+                if (bodyArea.getDisplayNameFr() != null) {
+                    existingBodyArea.setDisplayNameFr(bodyArea.getDisplayNameFr());
+                }
 
                 return existingBodyArea;
             })

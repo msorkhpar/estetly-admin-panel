@@ -31,9 +31,18 @@ public class Procedure implements Serializable {
     @Column(name = "title", length = 254, nullable = false)
     private String title;
 
+    @NotNull
+    @Size(max = 254)
+    @Column(name = "title_fr", length = 254, nullable = false)
+    private String titleFr;
+
     @Lob
     @Column(name = "description")
     private String description;
+
+    @Lob
+    @Column(name = "description_fr")
+    private String descriptionFr;
 
     @Lob
     @Column(name = "picture")
@@ -83,6 +92,19 @@ public class Procedure implements Serializable {
         this.title = title;
     }
 
+    public String getTitleFr() {
+        return this.titleFr;
+    }
+
+    public Procedure titleFr(String titleFr) {
+        this.setTitleFr(titleFr);
+        return this;
+    }
+
+    public void setTitleFr(String titleFr) {
+        this.titleFr = titleFr;
+    }
+
     public String getDescription() {
         return this.description;
     }
@@ -94,6 +116,19 @@ public class Procedure implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getDescriptionFr() {
+        return this.descriptionFr;
+    }
+
+    public Procedure descriptionFr(String descriptionFr) {
+        this.setDescriptionFr(descriptionFr);
+        return this;
+    }
+
+    public void setDescriptionFr(String descriptionFr) {
+        this.descriptionFr = descriptionFr;
     }
 
     public byte[] getPicture() {
@@ -204,7 +239,9 @@ public class Procedure implements Serializable {
         return "Procedure{" +
             "id=" + getId() +
             ", title='" + getTitle() + "'" +
+            ", titleFr='" + getTitleFr() + "'" +
             ", description='" + getDescription() + "'" +
+            ", descriptionFr='" + getDescriptionFr() + "'" +
             ", picture='" + getPicture() + "'" +
             ", pictureContentType='" + getPictureContentType() + "'" +
             ", invasiveness=" + getInvasiveness() +

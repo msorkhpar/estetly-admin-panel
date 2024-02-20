@@ -1,11 +1,11 @@
-id;title;description;picture;picture_content_type;invasiveness;average_cost
-1;phooey gray;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;77;370.52
-2;keenly;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;36;16068.88
-3;fond until;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;27;5828.54
-4;meanwhile;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;69;287.55
-5;distinguish female amongst;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;98;14894.09
-6;eek queasily excepting;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;7;18507.48
-7;accidentally average for;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;38;32210.48
-8;firsthand;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;29;16543.37
-9;still;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;99;25981.88
-10;smoothly vice list;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;24;31090.88
+id;title;title_fr;description;description_fr;picture;picture_content_type;invasiveness;average_cost
+1;phooey gray;afore drab pond;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;60;1862.1
+2;inside;zowie distinguish female;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;37;24529.69
+3;scarcely;writing imaginary blah;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;57;28557.58
+4;quickly geez;without unethically;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;28;9688.92
+5;radio bumpy;bog at;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;14;15349.71
+6;why heyday;considering sans;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;21;24129.24
+7;prophesy;yahoo gadzooks;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;14;914.79
+8;haul where senate;dim;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;35;7648.74
+9;qua default;eat;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;65;25124.8
+10;yum rightfully;hourly tide;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.txt;../fake-data/blob/hipster.png;image/png;26;12660.71

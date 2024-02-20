@@ -33,6 +33,9 @@ class CategoryResourceIT {
     private static final String DEFAULT_NAME = "AAAAAAAAAA";
     private static final String UPDATED_NAME = "BBBBBBBBBB";
 
+    private static final String DEFAULT_NAME_FR = "AAAAAAAAAA";
+    private static final String UPDATED_NAME_FR = "BBBBBBBBBB";
+
     private static final Models DEFAULT_MODEL = Models.MODEL_1;
     private static final Models UPDATED_MODEL = Models.MODEL_2;
 
@@ -60,7 +63,7 @@ class CategoryResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Category createEntity(EntityManager em) {
-        Category category = new Category().name(DEFAULT_NAME).model(DEFAULT_MODEL);
+        Category category = new Category().name(DEFAULT_NAME).nameFr(DEFAULT_NAME_FR).model(DEFAULT_MODEL);
         return category;
     }
 
@@ -71,7 +74,7 @@ class CategoryResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Category createUpdatedEntity(EntityManager em) {
-        Category category = new Category().name(UPDATED_NAME).model(UPDATED_MODEL);
+        Category category = new Category().name(UPDATED_NAME).nameFr(UPDATED_NAME_FR).model(UPDATED_MODEL);
         return category;
     }
 
@@ -94,6 +97,7 @@ class CategoryResourceIT {
         assertThat(categoryList).hasSize(databaseSizeBeforeCreate + 1);
         Category testCategory = categoryList.get(categoryList.size() - 1);
         assertThat(testCategory.getName()).isEqualTo(DEFAULT_NAME);
+        assertThat(testCategory.getNameFr()).isEqualTo(DEFAULT_NAME_FR);
         assertThat(testCategory.getModel()).isEqualTo(DEFAULT_MODEL);
     }
 
@@ -121,6 +125,23 @@ class CategoryResourceIT {
         int databaseSizeBeforeTest = categoryRepository.findAll().size();
         // set the field null
         category.setName(null);
+
+        // Create the Category, which fails.
+
+        restCategoryMockMvc
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(category)))
+            .andExpect(status().isBadRequest());
+
+        List<Category> categoryList = categoryRepository.findAll();
+        assertThat(categoryList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
+    void checkNameFrIsRequired() throws Exception {
+        int databaseSizeBeforeTest = categoryRepository.findAll().size();
+        // set the field null
+        category.setNameFr(null);
 
         // Create the Category, which fails.
 
@@ -162,6 +183,7 @@ class CategoryResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(category.getId().intValue())))
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME)))
+            .andExpect(jsonPath("$.[*].nameFr").value(hasItem(DEFAULT_NAME_FR)))
             .andExpect(jsonPath("$.[*].model").value(hasItem(DEFAULT_MODEL.toString())));
     }
 
@@ -178,6 +200,7 @@ class CategoryResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(category.getId().intValue()))
             .andExpect(jsonPath("$.name").value(DEFAULT_NAME))
+            .andExpect(jsonPath("$.nameFr").value(DEFAULT_NAME_FR))
             .andExpect(jsonPath("$.model").value(DEFAULT_MODEL.toString()));
     }
 
@@ -200,7 +223,7 @@ class CategoryResourceIT {
         Category updatedCategory = categoryRepository.findById(category.getId()).orElseThrow();
         // Disconnect from session so that the updates on updatedCategory are not directly saved in db
         em.detach(updatedCategory);
-        updatedCategory.name(UPDATED_NAME).model(UPDATED_MODEL);
+        updatedCategory.name(UPDATED_NAME).nameFr(UPDATED_NAME_FR).model(UPDATED_MODEL);
 
         restCategoryMockMvc
             .perform(
@@ -215,6 +238,7 @@ class CategoryResourceIT {
         assertThat(categoryList).hasSize(databaseSizeBeforeUpdate);
         Category testCategory = categoryList.get(categoryList.size() - 1);
         assertThat(testCategory.getName()).isEqualTo(UPDATED_NAME);
+        assertThat(testCategory.getNameFr()).isEqualTo(UPDATED_NAME_FR);
         assertThat(testCategory.getModel()).isEqualTo(UPDATED_MODEL);
     }
 
@@ -286,36 +310,6 @@ class CategoryResourceIT {
         Category partialUpdatedCategory = new Category();
         partialUpdatedCategory.setId(category.getId());
 
-        partialUpdatedCategory.name(UPDATED_NAME);
-
-        restCategoryMockMvc
-            .perform(
-                patch(ENTITY_API_URL_ID, partialUpdatedCategory.getId())
-                    .contentType("application/merge-patch+json")
-                    .content(TestUtil.convertObjectToJsonBytes(partialUpdatedCategory))
-            )
-            .andExpect(status().isOk());
-
-        // Validate the Category in the database
-        List<Category> categoryList = categoryRepository.findAll();
-        assertThat(categoryList).hasSize(databaseSizeBeforeUpdate);
-        Category testCategory = categoryList.get(categoryList.size() - 1);
-        assertThat(testCategory.getName()).isEqualTo(UPDATED_NAME);
-        assertThat(testCategory.getModel()).isEqualTo(DEFAULT_MODEL);
-    }
-
-    @Test
-    @Transactional
-    void fullUpdateCategoryWithPatch() throws Exception {
-        // Initialize the database
-        categoryRepository.saveAndFlush(category);
-
-        int databaseSizeBeforeUpdate = categoryRepository.findAll().size();
-
-        // Update the category using partial update
-        Category partialUpdatedCategory = new Category();
-        partialUpdatedCategory.setId(category.getId());
-
         partialUpdatedCategory.name(UPDATED_NAME).model(UPDATED_MODEL);
 
         restCategoryMockMvc
@@ -331,6 +325,38 @@ class CategoryResourceIT {
         assertThat(categoryList).hasSize(databaseSizeBeforeUpdate);
         Category testCategory = categoryList.get(categoryList.size() - 1);
         assertThat(testCategory.getName()).isEqualTo(UPDATED_NAME);
+        assertThat(testCategory.getNameFr()).isEqualTo(DEFAULT_NAME_FR);
+        assertThat(testCategory.getModel()).isEqualTo(UPDATED_MODEL);
+    }
+
+    @Test
+    @Transactional
+    void fullUpdateCategoryWithPatch() throws Exception {
+        // Initialize the database
+        categoryRepository.saveAndFlush(category);
+
+        int databaseSizeBeforeUpdate = categoryRepository.findAll().size();
+
+        // Update the category using partial update
+        Category partialUpdatedCategory = new Category();
+        partialUpdatedCategory.setId(category.getId());
+
+        partialUpdatedCategory.name(UPDATED_NAME).nameFr(UPDATED_NAME_FR).model(UPDATED_MODEL);
+
+        restCategoryMockMvc
+            .perform(
+                patch(ENTITY_API_URL_ID, partialUpdatedCategory.getId())
+                    .contentType("application/merge-patch+json")
+                    .content(TestUtil.convertObjectToJsonBytes(partialUpdatedCategory))
+            )
+            .andExpect(status().isOk());
+
+        // Validate the Category in the database
+        List<Category> categoryList = categoryRepository.findAll();
+        assertThat(categoryList).hasSize(databaseSizeBeforeUpdate);
+        Category testCategory = categoryList.get(categoryList.size() - 1);
+        assertThat(testCategory.getName()).isEqualTo(UPDATED_NAME);
+        assertThat(testCategory.getNameFr()).isEqualTo(UPDATED_NAME_FR);
         assertThat(testCategory.getModel()).isEqualTo(UPDATED_MODEL);
     }
 

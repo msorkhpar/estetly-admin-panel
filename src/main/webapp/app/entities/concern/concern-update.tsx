@@ -113,6 +113,16 @@ export const ConcernUpdate = () => {
                 }}
               />
               <ValidatedField
+                label={translate('estetlyApp.concern.titleFr')}
+                id="concern-titleFr"
+                name="titleFr"
+                data-cy="titleFr"
+                type="text"
+                validate={{
+                  required: { value: true, message: translate('entity.validation.required') },
+                }}
+              />
+              <ValidatedField
                 label={translate('estetlyApp.concern.gender')}
                 id="concern-gender"
                 name="gender"
@@ -133,10 +143,24 @@ export const ConcernUpdate = () => {
                 type="text"
               />
               <ValidatedField
+                label={translate('estetlyApp.concern.otherNamesFr')}
+                id="concern-otherNamesFr"
+                name="otherNamesFr"
+                data-cy="otherNamesFr"
+                type="text"
+              />
+              <ValidatedField
                 label={translate('estetlyApp.concern.description')}
                 id="concern-description"
                 name="description"
                 data-cy="description"
+                type="textarea"
+              />
+              <ValidatedField
+                label={translate('estetlyApp.concern.descriptionFr')}
+                id="concern-descriptionFr"
+                name="descriptionFr"
+                data-cy="descriptionFr"
                 type="textarea"
               />
               <ValidatedBlobField

@@ -91,6 +91,10 @@ export const Category = () => {
                   <Translate contentKey="estetlyApp.category.name">Name</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('name')} />
                 </th>
+                <th className="hand" onClick={sort('nameFr')}>
+                  <Translate contentKey="estetlyApp.category.nameFr">Name Fr</Translate>{' '}
+                  <FontAwesomeIcon icon={getSortIconByFieldName('nameFr')} />
+                </th>
                 <th className="hand" onClick={sort('model')}>
                   <Translate contentKey="estetlyApp.category.model">Model</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('model')} />
@@ -107,6 +111,7 @@ export const Category = () => {
                     </Button>
                   </td>
                   <td>{category.name}</td>
+                  <td>{category.nameFr}</td>
                   <td>
                     <Translate contentKey={`estetlyApp.Models.${category.model}`} />
                   </td>

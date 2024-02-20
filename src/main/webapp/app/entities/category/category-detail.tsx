@@ -38,6 +38,12 @@ export const CategoryDetail = () => {
           </dt>
           <dd>{categoryEntity.name}</dd>
           <dt>
+            <span id="nameFr">
+              <Translate contentKey="estetlyApp.category.nameFr">Name Fr</Translate>
+            </span>
+          </dt>
+          <dd>{categoryEntity.nameFr}</dd>
+          <dt>
             <span id="model">
               <Translate contentKey="estetlyApp.category.model">Model</Translate>
             </span>

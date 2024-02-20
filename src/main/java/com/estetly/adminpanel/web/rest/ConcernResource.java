@@ -128,14 +128,23 @@ public class ConcernResource {
                 if (concern.getTitle() != null) {
                     existingConcern.setTitle(concern.getTitle());
                 }
+                if (concern.getTitleFr() != null) {
+                    existingConcern.setTitleFr(concern.getTitleFr());
+                }
                 if (concern.getGender() != null) {
                     existingConcern.setGender(concern.getGender());
                 }
                 if (concern.getOtherNames() != null) {
                     existingConcern.setOtherNames(concern.getOtherNames());
                 }
+                if (concern.getOtherNamesFr() != null) {
+                    existingConcern.setOtherNamesFr(concern.getOtherNamesFr());
+                }
                 if (concern.getDescription() != null) {
                     existingConcern.setDescription(concern.getDescription());
+                }
+                if (concern.getDescriptionFr() != null) {
+                    existingConcern.setDescriptionFr(concern.getDescriptionFr());
                 }
                 if (concern.getPicture() != null) {
                     existingConcern.setPicture(concern.getPicture());

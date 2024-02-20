@@ -38,11 +38,23 @@ export const ProcedureDetail = () => {
           </dt>
           <dd>{procedureEntity.title}</dd>
           <dt>
+            <span id="titleFr">
+              <Translate contentKey="estetlyApp.procedure.titleFr">Title Fr</Translate>
+            </span>
+          </dt>
+          <dd>{procedureEntity.titleFr}</dd>
+          <dt>
             <span id="description">
               <Translate contentKey="estetlyApp.procedure.description">Description</Translate>
             </span>
           </dt>
           <dd>{procedureEntity.description}</dd>
+          <dt>
+            <span id="descriptionFr">
+              <Translate contentKey="estetlyApp.procedure.descriptionFr">Description Fr</Translate>
+            </span>
+          </dt>
+          <dd>{procedureEntity.descriptionFr}</dd>
           <dt>
             <span id="picture">
               <Translate contentKey="estetlyApp.procedure.picture">Picture</Translate>

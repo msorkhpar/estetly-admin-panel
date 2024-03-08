@@ -1,0 +1,10 @@
+{
+  "estetlyApp": {
+    "SubscriberStatus": {
+      "null": "",
+      "INITIATED": "INITIATED",
+      "PROCESSING": "PROCESSING",
+      "REGISTERED": "REGISTERED"
+    }
+  }
+}

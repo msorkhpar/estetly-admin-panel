@@ -12,6 +12,7 @@ import Concern from './concern';
 import BodyAreaConcernAssociation from './body-area-concern-association';
 import ConcernProcedureAssociation from './concern-procedure-association';
 import DoctorProcedureAssociation from './doctor-procedure-association';
+import PreSubscription from './pre-subscription';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 export default () => {
@@ -28,6 +29,7 @@ export default () => {
         <Route path="body-area-concern-association/*" element={<BodyAreaConcernAssociation />} />
         <Route path="concern-procedure-association/*" element={<ConcernProcedureAssociation />} />
         <Route path="doctor-procedure-association/*" element={<DoctorProcedureAssociation />} />
+        <Route path="pre-subscription/*" element={<PreSubscription />} />
         {/* jhipster-needle-add-route-path - JHipster will add routes here */}
       </ErrorBoundaryRoutes>
     </div>

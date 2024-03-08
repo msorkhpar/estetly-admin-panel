@@ -18,7 +18,7 @@ application {
     entities *
 }
 
-paginate Doctor, Review, Procedure, BodyAreaConcernAssociation, ConcernProcedureAssociation, DoctorProcedureAssociation with pagination
+paginate Doctor, Review, Procedure, BodyAreaConcernAssociation, ConcernProcedureAssociation, DoctorProcedureAssociation, PreSubscription with pagination
 
 DEFAULT_MIN_LENGTH = 1
 DEFAULT_MAX_LENGTH = 254
@@ -36,6 +36,23 @@ enum Gender {
     FEMALE
     MALE,
     ALL
+}
+
+enum Subscriber {
+    PROFESSIONAL,
+    PATIENT
+}
+
+enum EmailStatus {
+    SENDING,
+    SENT,
+    FAILED
+}
+
+enum SubscriberStatus {
+    INITIATED,
+    PROCESSING,
+    REGISTERED
 }
 
 entity Category {
@@ -96,6 +113,15 @@ entity DoctorProcedureAssociation {
     cost Float
 }
 
+entity PreSubscription {
+    subscriberType Subscriber required,
+    fullname String required,
+    email String required,
+    phoneNumber String required,
+    timestamp ZonedDateTime required
+    emailStatus EmailStatus required
+    subscriberStatus SubscriberStatus required
+}
 
 relationship ManyToOne {
     BodyAreaConcernAssociation{bodyArea(displayName) required} to BodyArea

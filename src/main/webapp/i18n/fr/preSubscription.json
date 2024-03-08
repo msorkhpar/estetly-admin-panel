@@ -1,0 +1,30 @@
+{
+  "estetlyApp": {
+    "preSubscription": {
+      "home": {
+        "title": "PreSubscriptions",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Pre Subscription",
+        "createOrEditLabel": "Créer ou éditer un Pre Subscription",
+        "notFound": "Aucun Pre Subscription trouvé"
+      },
+      "created": "Un nouveau Pre Subscription a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Pre Subscription avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Pre Subscription avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Pre Subscription {{ id }} ?"
+      },
+      "detail": {
+        "title": "Pre Subscription"
+      },
+      "id": "ID",
+      "subscriberType": "Subscriber Type",
+      "fullname": "Fullname",
+      "email": "Email",
+      "phoneNumber": "Phone Number",
+      "timestamp": "Timestamp",
+      "emailStatus": "Email Status",
+      "subscriberStatus": "Subscriber Status"
+    }
+  }
+}

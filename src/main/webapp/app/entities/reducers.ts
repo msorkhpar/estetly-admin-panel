@@ -7,6 +7,7 @@ import concern from 'app/entities/concern/concern.reducer';
 import bodyAreaConcernAssociation from 'app/entities/body-area-concern-association/body-area-concern-association.reducer';
 import concernProcedureAssociation from 'app/entities/concern-procedure-association/concern-procedure-association.reducer';
 import doctorProcedureAssociation from 'app/entities/doctor-procedure-association/doctor-procedure-association.reducer';
+import preSubscription from 'app/entities/pre-subscription/pre-subscription.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 const entitiesReducers = {
@@ -19,6 +20,7 @@ const entitiesReducers = {
   bodyAreaConcernAssociation,
   concernProcedureAssociation,
   doctorProcedureAssociation,
+  preSubscription,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
 };
 

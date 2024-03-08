@@ -16,7 +16,8 @@
         "concern": "Concern",
         "bodyAreaConcernAssociation": "Body Area Concern Association",
         "concernProcedureAssociation": "Concern Procedure Association",
-        "doctorProcedureAssociation": "Doctor Procedure Association"
+        "doctorProcedureAssociation": "Doctor Procedure Association",
+        "preSubscription": "Pre Subscription"
       },
       "account": {
         "main": "Compte",

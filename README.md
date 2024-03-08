@@ -224,6 +224,8 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 jhipster jdl panel.jdl
 ./mvnw package -Pprod -Dmaven.test.skip jib:dockerBuild -Djib.to.image=sorkhpar/estetly-admin-panel:latest
 docker push  sorkhpar/estetly-admin-panel
+docker pull  sorkhpar/estetly-admin-panel
+
 ```
 
 [JHipster Homepage and latest documentation]: https://www.jhipster.tech

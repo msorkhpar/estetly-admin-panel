@@ -59,6 +59,7 @@ public class CacheConfiguration {
             createCache(cm, com.estetly.adminpanel.domain.BodyAreaConcernAssociation.class.getName());
             createCache(cm, com.estetly.adminpanel.domain.ConcernProcedureAssociation.class.getName());
             createCache(cm, com.estetly.adminpanel.domain.DoctorProcedureAssociation.class.getName());
+            createCache(cm, com.estetly.adminpanel.domain.PreSubscription.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

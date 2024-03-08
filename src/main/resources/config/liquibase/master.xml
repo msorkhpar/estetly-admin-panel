@@ -26,6 +26,7 @@
     <include file="config/liquibase/changelog/20240214094828_added_entity_BodyAreaConcernAssociation.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20240214094829_added_entity_ConcernProcedureAssociation.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20240214094830_added_entity_DoctorProcedureAssociation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240308215754_added_entity_PreSubscription.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20240214094823_added_entity_constraints_BodyArea.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20240214094825_added_entity_constraints_Review.xml" relativeToChangelogFile="false"/>

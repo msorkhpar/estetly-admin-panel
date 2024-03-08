@@ -1,0 +1,10 @@
+{
+  "estetlyApp": {
+    "EmailStatus": {
+      "null": "",
+      "SENDING": "SENDING",
+      "SENT": "SENT",
+      "FAILED": "FAILED"
+    }
+  }
+}

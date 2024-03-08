@@ -1,0 +1,51 @@
+{
+  "annotations": {
+    "changelogDate": "20240308215754"
+  },
+  "applications": ["Estetly"],
+  "entityTableName": "pre_subscription",
+  "fields": [
+    {
+      "fieldName": "subscriberType",
+      "fieldType": "Subscriber",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "PROFESSIONAL,PATIENT"
+    },
+    {
+      "fieldName": "fullname",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "timestamp",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "emailStatus",
+      "fieldType": "EmailStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "SENDING,SENT,FAILED"
+    },
+    {
+      "fieldName": "subscriberStatus",
+      "fieldType": "SubscriberStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "INITIATED,PROCESSING,REGISTERED"
+    }
+  ],
+  "name": "PreSubscription",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}
